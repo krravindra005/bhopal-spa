@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* AuraNest Wellness — Warm Ivory, Eucalyptus Sage, Terracotta & Espresso Palette */
+  --color-warm-ivory: #FAF7F2;          /* Primary body background */
+  --color-soft-cream: #F3EFE6;          /* Secondary background & section tint */
+  --color-cream-card: #FFFFFF;          /* Pure card & surface canvas */
+  --color-cream-subtle: #F9F6F0;        /* Subtle container backdrop */
+  
+  --color-sage: #446353;                /* Muted eucalyptus / dusty sage (Primary brand) */
+  --color-sage-hover: #365143;          /* Eucalyptus hover */
+  --color-sage-light: #E7EFEA;          /* Soft sage pill & badge background */
+  --color-sage-muted: #7A9988;          /* Soft eucalyptus decorative border */
+  
+  --color-terracotta: #B3644C;          /* Distinctive soft terracotta / clay accent */
+  --color-terracotta-hover: #9B533D;    /* Terracotta interactive hover */
+  --color-terracotta-light: #F7EDE8;    /* Muted clay / rose tint */
+  --color-terracotta-border: #E8D3CB;   /* Terracotta subtle divider */
+  
+  --color-sand: #ECE4D8;                /* Warm sand supporting tone */
+  --color-sand-light: #F5F0E8;          /* Light beige panel background */
+  --color-taupe: #8C8275;               /* Warm taupe */
+  --color-border-warm: #E3DACD;         /* Delicate organic border */
+  
+  --color-espresso: #28231D;            /* Deep espresso brown (Replaces dark navy) */
+  --color-espresso-surface: #1E1A15;    /* Deep espresso footer / dark container */
+  --color-espresso-subtle: #332D26;     /* Espresso divider line */
+  --color-text-main: #28231D;           /* Deep espresso body text */
+  --color-text-muted: #685F53;          /* Warm charcoal / muted espresso secondary text */
+  --color-text-caption: #8E8476;        /* Subdued caption text */
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: #FAF7F2;
+  color: #28231D;
+}
+
+body {
+  background-color: #FAF7F2;
+  color: #28231D;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #E7EFEA;
+  color: #365143;
+}
