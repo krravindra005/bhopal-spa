@@ -1,6 +1,6 @@
 /**
- * AuraNest Wellness — Centralized Business Configuration
- * ======================================================
+ * Pranaya Wellness Sanctuary — Centralized Business Configuration
+ * ===============================================================
  * 
  * Update this file to modify office location, Google Maps integration,
  * contact email, phone status, or sanctuary operating hours.
@@ -16,6 +16,7 @@ export interface BusinessConfig {
   city: string;
   state: string;
   country: string;
+  zipFileName: string;
   
   /**
    * Street address or office suite placeholder.
@@ -73,10 +74,11 @@ export interface BusinessConfig {
 }
 
 export const BUSINESS_CONFIG: BusinessConfig = {
-  brandName: "AuraNest Wellness",
-  brandShort: "AuraNest",
+  brandName: "Pranaya Wellness Sanctuary",
+  brandShort: "Pranaya Wellness",
   tagline: "Sanctuary of Restorative Living & Holistic Wellness",
   shortDescription: "An exquisite wellness and restorative spa sanctuary in Bhopal, Madhya Pradesh. Uniting therapeutic deep-tissue bodywork, calming hydro-thermal rituals, botanical skin therapies, and authentic Vedic healing in quiet, climate-controlled suites.",
+  zipFileName: "pranaya-wellness-project.zip",
   
   // Official Location
   city: "Bhopal",

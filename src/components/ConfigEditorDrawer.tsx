@@ -58,9 +58,9 @@ export const ConfigEditorDrawer: React.FC<ConfigEditorDrawerProps> = ({
   };
 
   const generatedTsCode = `export const BUSINESS_CONFIG: BusinessConfig = {
-  brandName: "AuraNest Wellness",
-  brandShort: "AuraNest",
-  tagline: "Sanctuary of Restorative Living & Holistic Wellness",
+  brandName: "${BUSINESS_CONFIG.brandName}",
+  brandShort: "${BUSINESS_CONFIG.brandShort}",
+  tagline: "${BUSINESS_CONFIG.tagline}",
   city: "${city}",
   state: "${state}",
   country: "India",
@@ -72,6 +72,7 @@ export const ConfigEditorDrawer: React.FC<ConfigEditorDrawerProps> = ({
   isPhoneConfigured: ${isPhoneConfigured},
   whatsappNumber: ${whatsappNumber.trim() ? `"${whatsappNumber.trim()}"` : 'null'},
   isWhatsappConfigured: ${isWhatsappConfigured},
+  zipFileName: "${BUSINESS_CONFIG.zipFileName}",
   maps: {
     latitude: 23.259933,
     longitude: 77.412615,
@@ -100,7 +101,7 @@ export const ConfigEditorDrawer: React.FC<ConfigEditorDrawerProps> = ({
             <MapPin className="w-5 h-5 text-[#7A9988]" />
             <div>
               <h3 className="font-serif text-lg font-medium text-[#FAF7F2]">
-                AuraNest Business & Map Center
+                {BUSINESS_CONFIG.brandShort} Business & Map Center
               </h3>
               <p className="text-xs text-[#7A9988]">
                 Centralized in <code className="text-[#FAF7F2]">src/config/business.ts</code>

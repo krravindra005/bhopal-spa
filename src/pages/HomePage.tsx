@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Clock, Star, MapPin, Calendar, HeartHandshake, Droplets, ShieldCheck, Award } from 'lucide-react';
-import { SPA_SERVICES, AURANEST_PILLARS, TESTIMONIALS, SpaService } from '../data/spaData';
+import { SPA_SERVICES, PRANAYA_PILLARS, TESTIMONIALS, SpaService } from '../data/spaData';
 import { BUSINESS_CONFIG } from '../config/business';
 import { GoogleMapsEmbed } from '../components/GoogleMapsEmbed';
 
@@ -48,7 +48,7 @@ export const HomePage: React.FC<HomePageProps> = ({
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1920&q=85"
-            alt="AuraNest Wellness Sanctuary peaceful massage suite in Bhopal"
+            alt="Pranaya Wellness Sanctuary peaceful massage suite in Bhopal"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-center filter brightness-[0.78] contrast-[1.05]"
           />
@@ -133,7 +133,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             <div className="relative rounded-xl overflow-hidden shadow-lg aspect-4/3 sm:aspect-5/4 bg-[#F3EFE6] border border-[#E3DACD]">
               <img
                 src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1000&q=80"
-                alt="Therapist preparing restorative bodywork at AuraNest Wellness Bhopal"
+                alt="Therapist preparing restorative bodywork at Pranaya Wellness Sanctuary Bhopal"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
               />
@@ -144,7 +144,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 "Restoration is not mere stillness, but the active revival of physical harmony and mental clarity."
               </p>
               <p className="text-[11px] uppercase tracking-wider text-[#B3644C] font-semibold mt-2">
-                — The AuraNest Sanctuary Credo
+                — The Pranaya Sanctuary Credo
               </p>
             </div>
           </div>
@@ -298,22 +298,22 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
       </section>
 
-      {/* 5. AuraNest Wellness Pillars */}
+      {/* 5. Pranaya Wellness Pillars */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="max-w-2xl mx-auto text-center mb-16">
           <div className="text-xs font-semibold uppercase tracking-widest text-[#446353] mb-2">
-            The AuraNest Standards
+            The Pranaya Standards
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl text-[#28231D] font-normal tracking-tight">
             Our Four Guiding Pillars of Care
           </h2>
           <p className="mt-3 text-sm text-[#685F53]">
-            Every treatment at AuraNest Wellness is guided by a commitment to clinical rigor, uncompromised botanical purity, and personalized comfort.
+            Every treatment at {BUSINESS_CONFIG.brandName} is guided by a commitment to clinical rigor, uncompromised botanical purity, and personalized comfort.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {AURANEST_PILLARS.map((pillar, idx) => (
+          {PRANAYA_PILLARS.map((pillar, idx) => (
             <div 
               key={idx}
               className="bg-white p-6 rounded-xl border border-[#E3DACD] shadow-xs flex flex-col"
@@ -343,7 +343,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               Testimonials from Bhopal Guests
             </h2>
             <p className="mt-3 text-sm text-[#685F53]">
-              Real feedback from guests who trust AuraNest for physical recovery and inner peace.
+              Real feedback from guests who trust Pranaya for physical recovery and inner peace.
             </p>
           </div>
 
@@ -381,7 +381,7 @@ export const HomePage: React.FC<HomePageProps> = ({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-8">
           <div className="lg:col-span-6">
             <div className="text-xs font-semibold uppercase tracking-widest text-[#446353] mb-2">
-              Visit AuraNest Wellness
+              Visit {BUSINESS_CONFIG.brandShort}
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl text-[#28231D] font-normal tracking-tight">
               Official Office & Spa Location

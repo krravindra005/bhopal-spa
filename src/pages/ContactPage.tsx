@@ -196,7 +196,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenConfig, onOpenBo
           <div className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-xl border border-[#E3DACD] shadow-xs">
             <div className="mb-8">
               <h3 className="font-serif text-2xl font-medium text-[#28231D]">
-                Send a Message to AuraNest Concierge
+                Send a Message to {BUSINESS_CONFIG.brandShort} Concierge
               </h3>
               <p className="text-xs sm:text-sm text-[#685F53] mt-1">
                 Fill out the form below for therapy consultations, customized wellness plans, or private group events.
@@ -311,7 +311,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenConfig, onOpenBo
                   </label>
                   <textarea
                     rows={4}
-                    placeholder="How can AuraNest concierge assist your restorative wellness journey?"
+                    placeholder="How can Pranaya concierge assist your restorative wellness journey?"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#28231D] bg-white focus:outline-hidden focus:ring-1 focus:ring-[#446353] placeholder:text-[#8C8275]/60 ${

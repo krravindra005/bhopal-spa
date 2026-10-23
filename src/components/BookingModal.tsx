@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X, Calendar, Clock, User, Phone, Mail, Sparkles, CheckCircle2, AlertCircle, Users, ArrowRight } from 'lucide-react';
 import { SPA_SERVICES, SpaService } from '../data/spaData';
 import { BUSINESS_CONFIG } from '../config/business';
+import { Logo } from './Logo';
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -79,7 +80,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
     // Simulate concierge appointment intake
     setTimeout(() => {
       setIsSubmitting(false);
-      const refCode = `AURANEST-${Math.floor(100000 + Math.random() * 900000)}`;
+      const refCode = `PRANAYA-${Math.floor(100000 + Math.random() * 900000)}`;
       setSubmittedData({
         referenceId: refCode,
         name,
@@ -113,15 +114,13 @@ export const BookingModal: React.FC<BookingModalProps> = ({
         {/* Header — Warm Espresso (#201C17) */}
         <div className="bg-[#201C17] text-white px-6 py-5 flex items-center justify-between border-b border-[#332D26]">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-[#E7EFEA] flex items-center justify-center text-[#446353] font-serif font-bold text-base">
-              A
-            </div>
+            <Logo variant="light" size="sm" showTagline={false} />
             <div>
               <h3 className="font-serif text-xl font-medium tracking-tight text-[#FAF7F2]">
                 Reserve Your Sanctuary Experience
               </h3>
               <p className="text-xs text-[#7A9988]">
-                {BUSINESS_CONFIG.city}, {BUSINESS_CONFIG.state} · AuraNest Concierge Intake
+                {BUSINESS_CONFIG.city}, {BUSINESS_CONFIG.state} · {BUSINESS_CONFIG.brandShort} Concierge Intake
               </p>
             </div>
           </div>

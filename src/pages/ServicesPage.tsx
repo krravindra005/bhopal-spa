@@ -34,7 +34,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
 
   const faqs = [
     {
-      q: 'What is provided for my appointment at AuraNest Wellness?',
+      q: 'What is provided for my appointment at Pranaya Wellness Sanctuary?',
       a: 'We provide single-use organic modesty undergarments, plush waffle robes, and sanitized slippers. During your session, you are fully draped with freshly warmed towels, uncovering only the specific muscle area being treated.',
     },
     {
@@ -58,7 +58,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
       <section className="bg-[#201C17] text-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-[#332D26]">
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-xs font-semibold uppercase tracking-widest text-[#7A9988] mb-2">
-            The AuraNest Menu · Bhopal
+            The Pranaya Menu · Bhopal
           </div>
           <h1 className="font-serif text-4xl sm:text-5xl font-normal tracking-tight text-[#FAF7F2]">
             Restorative Therapies & Rituals

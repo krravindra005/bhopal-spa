@@ -32,7 +32,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenBooking }) => {
           
           <div className="lg:col-span-6 space-y-6 text-[#28231D]">
             <div className="text-xs font-semibold uppercase tracking-widest text-[#446353]">
-              The AuraNest Origin
+              The Pranaya Origin
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl text-[#28231D] font-normal tracking-tight leading-tight">
               An Architectural Sanctuary of Pure Restoration
@@ -53,7 +53,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenBooking }) => {
             <div className="rounded-xl overflow-hidden shadow-xl aspect-4/3 bg-[#F3EFE6] border border-[#E3DACD]">
               <img
                 src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1200&q=80"
-                alt="Therapeutic wellness ritual at AuraNest Wellness Bhopal"
+                alt="Therapeutic wellness ritual at Pranaya Wellness Sanctuary Bhopal"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
               />
@@ -71,7 +71,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenBooking }) => {
               Our Core Commitments
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl text-[#28231D] font-normal tracking-tight">
-              The Guiding Principles of AuraNest Wellness
+              The Guiding Principles of {BUSINESS_CONFIG.brandShort}
             </h2>
           </div>
 
@@ -140,7 +140,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenBooking }) => {
           <div className="order-2 lg:order-1 rounded-xl overflow-hidden shadow-lg aspect-4/3 bg-[#F3EFE6] border border-[#E3DACD]">
             <img
               src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1200&q=80"
-              alt="Thermal volcanic stone treatment at AuraNest Wellness"
+              alt="Thermal volcanic stone treatment at Pranaya Wellness"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover"
             />
@@ -154,7 +154,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenBooking }) => {
               Certified Master Therapists
             </h2>
             <p className="text-sm sm:text-base text-[#685F53] leading-relaxed">
-              At AuraNest Wellness, therapy is treated as a clinical craft. Our practitioners hold formal certifications 
+              At {BUSINESS_CONFIG.brandName}, therapy is treated as a clinical craft. Our practitioners hold formal certifications 
               in musculoskeletal manipulation, trigger point deactivation, and authentic Vedic Marma point therapy.
             </p>
             <p className="text-sm sm:text-base text-[#685F53] leading-relaxed">

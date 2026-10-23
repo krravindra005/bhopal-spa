@@ -40,7 +40,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onOpenBooking }) => {
             Sanctuary Visual Tour
           </div>
           <h1 className="font-serif text-4xl sm:text-5xl font-normal tracking-tight text-[#FAF7F2]">
-            AuraNest Ambiance & Spaces
+            Pranaya Ambiance & Spaces
           </h1>
           <p className="mt-3 text-sm sm:text-base text-[#ECE4D8] font-light max-w-2xl mx-auto leading-relaxed">
             Experience the soothing warm cream, eucalyptus sage, and natural stone aesthetics of our suites, 
@@ -112,7 +112,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onOpenBooking }) => {
             Immerse Yourself in Mindful Tranquility
           </h3>
           <p className="text-xs sm:text-sm text-[#685F53] max-w-xl mx-auto mt-2">
-            Reserve your private treatment suite today and enjoy our serene AuraNest sanctuary atmosphere firsthand.
+            Reserve your private treatment suite today and enjoy our serene Pranaya sanctuary atmosphere firsthand.
           </p>
           <button
             onClick={onOpenBooking}

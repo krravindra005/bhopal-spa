@@ -30,7 +30,7 @@ export const GoogleMapsEmbed: React.FC<GoogleMapsEmbedProps> = ({
       {/* Google Maps Official Responsive Embed */}
       <div className={`w-full ${heightClass} relative z-0`}>
         <iframe
-          title="AuraNest Wellness Sanctuary Official Location Map"
+          title={`${BUSINESS_CONFIG.brandName} Official Location Map`}
           src={BUSINESS_CONFIG.maps.embedUrl}
           width="100%"
           height="100%"

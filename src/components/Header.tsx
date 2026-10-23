@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Calendar, MapPin, Mail, Phone, Settings } from 'lucide-react';
 import { BUSINESS_CONFIG } from '../config/business';
+import { Logo } from './Logo';
 
 interface HeaderProps {
   onOpenBooking: (serviceId?: string) => void;
@@ -77,22 +78,12 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking, onOpenConfig }) =
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-6 h-20">
           
-          {/* Brand Identity: AuraNest Wellness */}
+          {/* Brand Identity: Pranaya Wellness Sanctuary */}
           <Link 
             to="/" 
-            className="flex items-center gap-3.5 group whitespace-nowrap shrink-0"
+            className="flex items-center group whitespace-nowrap shrink-0"
           >
-            <div className="w-11 h-11 rounded-full bg-[#FAF7F2] border border-[#7A9988]/50 flex items-center justify-center text-[#28231D] group-hover:bg-[#E7EFEA] transition-colors shadow-xs">
-              <span className="font-serif text-2xl font-bold tracking-tight text-[#446353]">A</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-serif text-2xl sm:text-[26px] font-semibold tracking-tight text-[#28231D] leading-tight group-hover:text-[#446353] transition-colors">
-                {BUSINESS_CONFIG.brandName}
-              </span>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-[#8C8275] font-sans font-medium">
-                Sanctuary · Bhopal
-              </span>
-            </div>
+            <Logo variant="dark" size="md" />
           </Link>
 
           {/* Clean Navigation Links with Sage Accents */}

@@ -5,8 +5,9 @@ import { execSync } from 'node:child_process';
 const rootDir = process.cwd();
 const stagingDir = path.join(rootDir, 'dist_bundle');
 const publicDir = path.join(rootDir, 'public');
-const destZip = path.join(publicDir, 'auranest-wellness-project.zip');
-const legacyZip = path.join(publicDir, 'serenova-spa-project.zip');
+const destZip = path.join(publicDir, 'pranaya-wellness-project.zip');
+const legacyAuranestZip = path.join(publicDir, 'auranest-wellness-project.zip');
+const legacySerenovaZip = path.join(publicDir, 'serenova-spa-project.zip');
 
 console.log('Preparing clean staging directory...');
 if (fs.existsSync(stagingDir)) {
@@ -58,12 +59,13 @@ if (fs.existsSync(destZip)) {
 const psScript = `Compress-Archive -Path '${stagingDir}\\*' -DestinationPath '${destZip}' -CompressionLevel Optimal`;
 execSync(`powershell -NoProfile -Command "${psScript}"`, { stdio: 'inherit' });
 
-// Also duplicate to legacy zip so both paths work
-fs.copyFileSync(destZip, legacyZip);
+// Also duplicate to legacy zips so all paths work smoothly
+fs.copyFileSync(destZip, legacyAuranestZip);
+fs.copyFileSync(destZip, legacySerenovaZip);
 
 // Clean up staging
 fs.rmSync(stagingDir, { recursive: true, force: true });
 
 const stats = fs.statSync(destZip);
 console.log(`Successfully created ${destZip} (${(stats.size / 1024).toFixed(1)} KB)`);
-console.log(`Also updated legacy ${legacyZip}`);
+console.log(`Also synchronized backward-compatible archives: ${legacyAuranestZip} & ${legacySerenovaZip}`);

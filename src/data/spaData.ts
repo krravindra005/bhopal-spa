@@ -34,8 +34,8 @@ export interface Testimonial {
 
 export const SPA_SERVICES: SpaService[] = [
   {
-    id: 'auranest-deep-recovery',
-    title: 'AuraNest Kinetic Muscle Reset & Deep Tissue',
+    id: 'pranaya-deep-recovery',
+    title: 'Pranaya Kinetic Muscle Reset & Deep Tissue',
     category: 'Bodywork & Muscle Relief',
     shortDesc: 'Precision targeted trigger point therapy addressing dense sub-layer tightness, postural compression, and physical fatigue.',
     fullDesc: 'A rigorous anatomical treatment designed for tired musculature and chronic postural compression. Our master practitioners combine sustained deep-finger friction, myofascial stripping, and organic wild arnica infusions to disperse dense lactic deposits, re-align connective muscle bands, and restore effortless physical movement.',
@@ -176,8 +176,8 @@ export const SPA_SERVICES: SpaService[] = [
     imageUrl: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=80',
   },
   {
-    id: 'auranest-couples-haven',
-    title: 'AuraNest Sanctuary Couples Haven',
+    id: 'pranaya-couples-haven',
+    title: 'Pranaya Sanctuary Couples Haven',
     category: 'Sanctuary Packages',
     shortDesc: 'Synchronized dual massage in our premier VIP suite featuring private hydro-tub, floral foot bath, and artisan refreshments.',
     fullDesc: 'An exclusive, uninterrupted sanctuary designed for couples, friends, or companions. Enjoy dual side-by-side bespoke 75-minute therapeutic massages within our climate-controlled private executive suite. Completed with a welcoming floral foot soak, soothing acoustic ambiance, and artisan herbal tisanes.',
@@ -227,7 +227,7 @@ export const SPA_SERVICES: SpaService[] = [
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'ag-1',
-    title: 'AuraNest Tranquility Lounge',
+    title: 'Pranaya Tranquility Lounge',
     category: 'Sanctuary Spaces',
     imageUrl: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=80',
     caption: 'Calming soft cream and sand lounge space featuring botanical decor and warm ambient lighting.'
@@ -277,7 +277,7 @@ export const TESTIMONIALS: Testimonial[] = [
     treatment: 'Kinetic Muscle Reset & Deep Tissue',
     rating: 5,
     date: 'October 2026',
-    quote: 'The level of professionalism at AuraNest Wellness is exceptional. As someone dealing with stiff lower back muscles from long desk hours, their master therapist worked through the knots with genuine anatomical precision.',
+    quote: 'The level of professionalism at Pranaya Wellness Sanctuary is exceptional. As someone dealing with stiff lower back muscles from long desk hours, their master therapist worked through the knots with genuine anatomical precision.',
     outcome: 'Chronic postural back tightness resolved'
   },
   {
@@ -287,22 +287,22 @@ export const TESTIMONIALS: Testimonial[] = [
     treatment: 'Authentic Shirodhara & Golden Abhyanga',
     rating: 5,
     date: 'September 2026',
-    quote: 'Stepping into AuraNest feels like entering an entirely different world of peace. The continuous warm oil stream during Shirodhara quieted my anxiety and gave me the best night of deep sleep in years.',
+    quote: 'Stepping into Pranaya feels like entering an entirely different world of peace. The continuous warm oil stream during Shirodhara quieted my anxiety and gave me the best night of deep sleep in years.',
     outcome: 'Restored deep sleep and mental calm'
   },
   {
     id: 'at-3',
     author: 'Dev & Natasha Malhotra',
     locality: 'Kolar Road, Bhopal',
-    treatment: 'AuraNest Sanctuary Couples Haven',
+    treatment: 'Pranaya Sanctuary Couples Haven',
     rating: 5,
     date: 'August 2026',
-    quote: 'We spent our wedding anniversary at AuraNest’s VIP couples suite. The attention to detail, private rainfall showers, and warm earthy ambiance were world-class. Highly recommended!',
+    quote: 'We spent our wedding anniversary at Pranaya’s VIP couples suite. The attention to detail, private rainfall showers, and warm earthy ambiance were world-class. Highly recommended!',
     outcome: 'A memorable, deeply restorative anniversary'
   }
 ];
 
-export const AURANEST_PILLARS = [
+export const PRANAYA_PILLARS = [
   {
     title: 'Anatomical Precision & Master Touch',
     description: 'Every session is conducted by certified practitioners with comprehensive knowledge of musculoskeletal kinesiology and pressure meridians.',
@@ -324,3 +324,5 @@ export const AURANEST_PILLARS = [
     iconName: 'HeartHandshake'
   }
 ];
+
+export const AURANEST_PILLARS = PRANAYA_PILLARS;

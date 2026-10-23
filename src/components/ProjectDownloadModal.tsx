@@ -14,15 +14,16 @@ export const ProjectDownloadModal: React.FC<ProjectDownloadModalProps> = ({ isOp
 
   const projectFiles = [
     { name: 'src/config/business.ts', desc: 'Central office location, Google Maps embed & contact configuration' },
-    { name: 'src/data/spaData.ts', desc: 'AuraNest therapies catalog, prices (₹), durations, gallery & reviews' },
-    { name: 'src/components/Header.tsx', desc: 'Top bar navigation with AuraNest eucalyptus sage branding & Download ZIP button' },
-    { name: 'src/components/Footer.tsx', desc: 'Warm espresso footer with Bhopal local context, hours & direct zip download' },
+    { name: 'src/data/spaData.ts', desc: 'Pranaya therapies catalog, prices (₹), durations, gallery & reviews' },
+    { name: 'src/components/Header.tsx', desc: 'Top bar navigation with Pranaya eucalyptus sage branding & logo' },
+    { name: 'src/components/Footer.tsx', desc: 'Warm espresso footer with Bhopal local context, hours & brand details' },
+    { name: 'src/components/Logo.tsx', desc: 'Scalable vector branding emblem and typography component' },
     { name: 'src/components/GoogleMapsEmbed.tsx', desc: 'Official Google Maps embed linked to centralized config' },
     { name: 'src/components/BookingModal.tsx', desc: 'Concierge appointment reservation form with validation' },
     { name: 'src/components/ServiceDetailModal.tsx', desc: 'Treatment breakdown with step-by-step protocols' },
     { name: 'src/components/ConfigEditorDrawer.tsx', desc: 'Live admin address/maps editor & code snippet generator' },
     { name: 'src/pages/HomePage.tsx', desc: 'Warm hero banner, 4-pillar trust strip, services grid & map' },
-    { name: 'src/pages/AboutPage.tsx', desc: 'AuraNest story, mindful restoration, hygiene & therapist standards' },
+    { name: 'src/pages/AboutPage.tsx', desc: 'Pranaya story, mindful restoration, hygiene & therapist standards' },
     { name: 'src/pages/ServicesPage.tsx', desc: 'Filtered treatments menu, search bar, prices & FAQs' },
     { name: 'src/pages/GalleryPage.tsx', desc: 'Interactive ambiance gallery with Lightbox zoom' },
     { name: 'src/pages/ContactPage.tsx', desc: 'Contact details, message inquiry form & map' },
@@ -58,7 +59,7 @@ export const ProjectDownloadModal: React.FC<ProjectDownloadModalProps> = ({ isOp
             </div>
             <div>
               <h3 className="font-serif text-lg font-medium text-[#FAF7F2]">
-                Download AuraNest Wellness Codebase
+                Download {BUSINESS_CONFIG.brandName} Codebase
               </h3>
               <p className="text-xs text-[#7A9988]">
                 React 19 + Vite + Tailwind CSS v4 · Warm Ivory & Eucalyptus Sage Palette
@@ -113,7 +114,7 @@ export const ProjectDownloadModal: React.FC<ProjectDownloadModalProps> = ({ isOp
             </h5>
             <div className="bg-[#201C17] text-[#FAF7F2] p-4 rounded-lg font-mono text-xs space-y-2 border border-[#3E362E]">
               <div className="text-[#7A9988]"># 1. Unzip the downloaded file:</div>
-              <div>unzip {BUSINESS_CONFIG.zipFileName} -d auranest-wellness && cd auranest-wellness</div>
+              <div>unzip {BUSINESS_CONFIG.zipFileName} -d pranaya-wellness && cd pranaya-wellness</div>
               <div className="text-[#7A9988] pt-1"># 2. Install dependencies:</div>
               <div>npm install</div>
               <div className="text-[#7A9988] pt-1"># 3. Start local development server:</div>

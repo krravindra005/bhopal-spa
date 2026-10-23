@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Mail, Phone, Clock, ArrowUpRight, ShieldCheck, Heart } from 'lucide-react';
 import { BUSINESS_CONFIG } from '../config/business';
+import { Logo } from './Logo';
 
 interface FooterProps {
   onOpenBooking: () => void;
@@ -47,14 +48,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenConfig }) =
           
           {/* Col 1: Brand & Identity */}
           <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-full bg-[#E7EFEA] flex items-center justify-center text-[#446353] font-serif font-bold text-base">
-                A
-              </div>
-              <span className="font-serif text-2xl font-bold tracking-tight text-[#FAF7F2]">
-                {BUSINESS_CONFIG.brandName}
-              </span>
-            </div>
+            <Link to="/" className="group inline-block">
+              <Logo variant="light" size="md" />
+            </Link>
             <p className="text-xs text-[#C5BBAF] leading-relaxed">
               Bhopal’s premier restorative spa sanctuary. We combine kinetic bodywork, 
               mineral hydro-therapies, and ancient Ayurvedic rituals to awaken holistic equilibrium.
@@ -82,7 +78,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenConfig }) =
                 <Link to="/" className="hover:text-[#FAF7F2] transition-colors">Sanctuary Home</Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-[#FAF7F2] transition-colors">About AuraNest</Link>
+                <Link to="/about" className="hover:text-[#FAF7F2] transition-colors">About {BUSINESS_CONFIG.brandShort}</Link>
               </li>
               <li>
                 <Link to="/services" className="hover:text-[#FAF7F2] transition-colors">Treatments & Pricing</Link>
