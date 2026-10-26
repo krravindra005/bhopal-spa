@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Clock, Star, MapPin, Calendar, HeartHandshake, Droplets, ShieldCheck, Award, Navigation, ExternalLink } from 'lucide-react';
+import { ArrowRight, Clock, Star, MapPin, Calendar, HeartHandshake, Droplets, ShieldCheck, Award, Navigation, ExternalLink, Phone } from 'lucide-react';
 import { SPA_SERVICES, NANDINI_PILLARS, TESTIMONIALS, SpaService } from '../data/spaData';
 import { BUSINESS_CONFIG } from '../config/business';
 import { GoogleMapsEmbed } from '../components/GoogleMapsEmbed';
@@ -411,6 +411,20 @@ export const HomePage: React.FC<HomePageProps> = ({
                   <span>{BUSINESS_CONFIG.hours.weekday}</span>
                 </div>
               </div>
+              {BUSINESS_CONFIG.isPhoneConfigured && BUSINESS_CONFIG.phone && (
+                <div className="flex items-start gap-2.5">
+                  <Phone className="w-4 h-4 text-[#446353] shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-[#28231D]">Concierge Desk: </span>
+                    <a 
+                      href={`tel:${BUSINESS_CONFIG.phone.replace(/[^0-9+]/g, '')}`}
+                      className="text-[#446353] hover:underline font-medium"
+                    >
+                      {BUSINESS_CONFIG.phone}
+                    </a>
+                  </div>
+                </div>
+              )}
             </div>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -424,6 +438,15 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <span>Get Google Maps Directions</span>
                 <ExternalLink className="w-3.5 h-3.5 ml-0.5 opacity-80" />
               </a>
+              {BUSINESS_CONFIG.isPhoneConfigured && BUSINESS_CONFIG.phone && (
+                <a
+                  href={`tel:${BUSINESS_CONFIG.phone.replace(/[^0-9+]/g, '')}`}
+                  className="px-6 py-3 border border-[#446353] text-[#446353] hover:bg-[#446353] hover:text-white text-xs font-semibold uppercase tracking-wider rounded-sm transition-colors bg-white inline-flex items-center gap-2"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>Call {BUSINESS_CONFIG.phone}</span>
+                </a>
+              )}
               <Link
                 to="/contact"
                 className="px-6 py-3 border border-[#E3DACD] hover:border-[#446353] text-[#28231D] text-xs font-semibold uppercase tracking-wider rounded-sm transition-colors bg-white"

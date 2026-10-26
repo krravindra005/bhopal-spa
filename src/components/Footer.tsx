@@ -163,7 +163,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenConfig }) =
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#7A9988] shrink-0" />
                 {BUSINESS_CONFIG.isPhoneConfigured && BUSINESS_CONFIG.phone ? (
-                  <a href={`tel:${BUSINESS_CONFIG.phone}`} className="hover:text-[#FAF7F2]">
+                  <a href={`tel:${BUSINESS_CONFIG.phone.replace(/[^0-9+]/g, '')}`} className="hover:text-[#FAF7F2]">
                     {BUSINESS_CONFIG.phone}
                   </a>
                 ) : (

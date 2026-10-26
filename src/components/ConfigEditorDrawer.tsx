@@ -220,7 +220,7 @@ export const ConfigEditorDrawer: React.FC<ConfigEditorDrawerProps> = ({
                   setIsPhoneConfigured(Boolean(e.target.value.trim()));
                 }}
                 className="w-full px-3 py-2 rounded border border-[#E3DACD] bg-white text-xs text-[#28231D] focus:ring-1 focus:ring-[#446353]"
-                placeholder="e.g. +91 755 492 8820"
+                placeholder="e.g. +91 90604 33848"
               />
               <div className="mt-1 flex items-center gap-2">
                 <input
@@ -246,7 +246,7 @@ export const ConfigEditorDrawer: React.FC<ConfigEditorDrawerProps> = ({
                   setIsWhatsappConfigured(Boolean(e.target.value.trim()));
                 }}
                 className="w-full px-3 py-2 rounded border border-[#E3DACD] bg-white text-xs text-[#28231D] focus:ring-1 focus:ring-[#446353]"
-                placeholder="e.g. +91 755 492 8820"
+                placeholder="e.g. +91 90604 33848"
               />
               <div className="mt-1 flex items-center gap-2">
                 <input

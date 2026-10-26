@@ -52,8 +52,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking, onOpenConfig }) =
 
             {BUSINESS_CONFIG.isPhoneConfigured && BUSINESS_CONFIG.phone && (
               <a 
-                href={`tel:${BUSINESS_CONFIG.phone}`}
-                className="hidden md:flex items-center gap-1.5 hover:text-white transition-colors text-[#ECE4D8]"
+                href={`tel:${BUSINESS_CONFIG.phone.replace(/[^0-9+]/g, '')}`}
+                className="hidden sm:flex items-center gap-1.5 hover:text-white transition-colors text-[#ECE4D8]"
+                title={`Call ${BUSINESS_CONFIG.phone}`}
               >
                 <Phone className="w-3.5 h-3.5 text-[#7A9988]" />
                 <span>{BUSINESS_CONFIG.phone}</span>
@@ -114,8 +115,18 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking, onOpenConfig }) =
             </button>
           </div>
 
-          {/* Mobile hamburger */}
-          <div className="flex items-center gap-2 md:hidden">
+          {/* Mobile hamburger & quick call */}
+          <div className="flex items-center gap-1.5 md:hidden">
+            {BUSINESS_CONFIG.isPhoneConfigured && BUSINESS_CONFIG.phone && (
+              <a
+                href={`tel:${BUSINESS_CONFIG.phone.replace(/[^0-9+]/g, '')}`}
+                aria-label={`Call ${BUSINESS_CONFIG.phone}`}
+                className="p-2 text-[#446353] hover:text-[#365143] rounded-md bg-[#E7EFEA] hover:bg-[#d8e6dc] transition-colors"
+                title={`Call ${BUSINESS_CONFIG.phone}`}
+              >
+                <Phone className="w-4 h-4" />
+              </a>
+            )}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle navigation menu"
@@ -160,8 +171,18 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking, onOpenConfig }) =
 
               <div className="text-xs text-[#685F53] flex flex-col gap-1 pt-2">
                 <span>📍 {BUSINESS_CONFIG.city}, {BUSINESS_CONFIG.state}</span>
-                <span>✉️ {BUSINESS_CONFIG.email}</span>
-                {BUSINESS_CONFIG.phone && <span>📞 {BUSINESS_CONFIG.phone}</span>}
+                <a href={`mailto:${BUSINESS_CONFIG.email}`} className="hover:text-[#446353] transition-colors">
+                  ✉️ {BUSINESS_CONFIG.email}
+                </a>
+                {BUSINESS_CONFIG.phone && (
+                  <a 
+                    href={`tel:${BUSINESS_CONFIG.phone.replace(/[^0-9+]/g, '')}`}
+                    className="hover:text-[#446353] transition-colors inline-flex items-center gap-1.5"
+                  >
+                    <span>📞</span>
+                    <span>{BUSINESS_CONFIG.phone}</span>
+                  </a>
+                )}
               </div>
             </div>
           </nav>

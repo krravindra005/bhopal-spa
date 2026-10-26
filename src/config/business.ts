@@ -115,12 +115,12 @@ export const BUSINESS_CONFIG: BusinessConfig = {
   email: "Karanbhai25807@gmail.com",
   
   // Mobile / Phone configuration
-  phone: "+91 755 492 8820",
-  phoneDisplayPlaceholder: "+91 755 492 8820",
+  phone: "+91 90604 33848",
+  phoneDisplayPlaceholder: "+91 90604 33848",
   isPhoneConfigured: true,
 
   // WhatsApp configuration
-  whatsappNumber: "+91 755 492 8820",
+  whatsappNumber: "+91 90604 33848",
   isWhatsappConfigured: true,
 
 

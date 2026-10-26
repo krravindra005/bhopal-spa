@@ -107,7 +107,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenConfig, onOpenBo
                   <div className="text-xs uppercase tracking-wider text-[#685F53] font-semibold">Telephone / Mobile</div>
                   {BUSINESS_CONFIG.isPhoneConfigured && BUSINESS_CONFIG.phone ? (
                     <a
-                      href={`tel:${BUSINESS_CONFIG.phone}`}
+                      href={`tel:${BUSINESS_CONFIG.phone.replace(/[^0-9+]/g, '')}`}
                       className="text-sm font-medium text-[#28231D] hover:text-[#446353] hover:underline mt-0.5 block"
                     >
                       {BUSINESS_CONFIG.phone}
