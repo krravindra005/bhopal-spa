@@ -34,7 +34,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
 
   const faqs = [
     {
-      q: 'What is provided for my appointment at Pranaya Wellness Sanctuary?',
+      q: 'What is provided for my appointment at Nandini Spa?',
       a: 'We provide single-use organic modesty undergarments, plush waffle robes, and sanitized slippers. During your session, you are fully draped with freshly warmed towels, uncovering only the specific muscle area being treated.',
     },
     {
@@ -58,7 +58,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
       <section className="bg-[#201C17] text-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-[#332D26]">
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-xs font-semibold uppercase tracking-widest text-[#7A9988] mb-2">
-            The Pranaya Menu · Bhopal
+            The Nandini Menu · Bhopal
           </div>
           <h1 className="font-serif text-4xl sm:text-5xl font-normal tracking-tight text-[#FAF7F2]">
             Restorative Therapies & Rituals
@@ -71,8 +71,8 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
       </section>
 
       {/* Filter and Search Bar — Sticky Pure White with Warm Border */}
-      <section className="sticky top-20 z-30 bg-white/95 backdrop-blur-md border-b border-[#E3DACD] py-4 px-4 sm:px-6 lg:px-8 shadow-xs">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <section className="sticky top-16 sm:top-20 z-30 bg-white/95 backdrop-blur-md border-b border-[#E3DACD] py-3 sm:py-4 px-4 sm:px-6 lg:px-8 shadow-xs">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 sm:gap-4">
           
           {/* Category Tabs */}
           <div className="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto pb-1 md:pb-0 scrollbar-none">
@@ -82,7 +82,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-3.5 py-1.5 text-xs rounded-full font-medium transition-colors cursor-pointer whitespace-nowrap shrink-0 ${
                   selectedCategory === cat
-                    ? 'bg-[#446353] text-white font-semibold'
+                    ? 'bg-[#446353] text-white font-semibold shadow-xs'
                     : 'bg-[#F3EFE6] text-[#28231D] hover:bg-[#E7EFEA]'
                 }`}
               >
@@ -93,13 +93,13 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
 
           {/* Search Input */}
           <div className="relative w-full md:w-72 shrink-0">
-            <Search className="w-4 h-4 text-[#8C8275] absolute left-3 top-2.5 pointer-events-none" />
+            <Search className="w-4 h-4 text-[#8C8275] absolute left-3 top-3 md:top-2.5 pointer-events-none" />
             <input
               type="text"
               placeholder="Search treatments or concerns..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-3.5 py-1.5 text-xs rounded-md border border-[#E3DACD] text-[#28231D] bg-[#FAF7F2] focus:bg-white focus:outline-hidden focus:ring-1 focus:ring-[#446353]"
+              className="w-full pl-9 pr-3.5 py-2 md:py-1.5 text-sm md:text-xs rounded-md border border-[#E3DACD] text-[#28231D] bg-[#FAF7F2] focus:bg-white focus:outline-hidden focus:ring-1 focus:ring-[#446353]"
             />
           </div>
 
@@ -107,7 +107,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
       </section>
 
       {/* Catalog Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {filtered.length === 0 ? (
           <div className="py-16 text-center text-[#685F53] bg-white rounded-xl border border-[#E3DACD] p-8">
             <p className="text-base font-medium text-[#28231D]">No treatments matched your criteria.</p>
@@ -123,7 +123,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {filtered.map((service) => (
               <div
                 key={service.id}
@@ -131,10 +131,11 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
               >
                 <div>
                   {/* Image */}
-                  <div className="relative h-56 bg-[#F3EFE6] overflow-hidden">
+                  <div className="relative aspect-16/10 sm:h-56 w-full bg-[#F3EFE6] overflow-hidden">
                     <img
                       src={service.imageUrl}
                       alt={service.title}
+                      loading="lazy"
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       onError={(e) => {
@@ -152,7 +153,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                   </div>
 
                   {/* Body Details */}
-                  <div className="p-6">
+                  <div className="p-5 sm:p-6">
                     <div className="flex items-center justify-between gap-2 text-xs text-[#685F53] mb-2">
                       <span className="flex items-center gap-1">
                         <Clock className="w-3.5 h-3.5 text-[#446353]" />
@@ -163,7 +164,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                       </span>
                     </div>
 
-                    <h3 className="font-serif text-xl font-medium text-[#28231D] tracking-tight leading-snug">
+                    <h3 className="font-serif text-lg sm:text-xl font-medium text-[#28231D] tracking-tight leading-snug line-clamp-2 min-h-[3rem] sm:min-h-[3.25rem] flex items-center">
                       {service.title}
                     </h3>
 
@@ -184,16 +185,16 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                 </div>
 
                 {/* Footer Buttons */}
-                <div className="px-6 pb-6 pt-2 flex items-center justify-between gap-3 border-t border-[#F3EFE6]">
+                <div className="px-5 sm:px-6 pb-5 sm:pb-6 pt-2 flex items-center justify-between gap-2 sm:gap-3 border-t border-[#F3EFE6]">
                   <button
                     onClick={() => onSelectService(service)}
-                    className="text-xs font-semibold uppercase tracking-wider text-[#685F53] hover:text-[#446353] underline underline-offset-4 cursor-pointer"
+                    className="text-xs font-semibold uppercase tracking-wider text-[#685F53] hover:text-[#446353] underline underline-offset-4 cursor-pointer py-1"
                   >
                     View Protocol
                   </button>
                   <button
                     onClick={() => onOpenBooking(service.id)}
-                    className="px-4 py-2 bg-[#446353] hover:bg-[#365143] text-white text-xs font-semibold uppercase tracking-wider rounded-sm transition-colors cursor-pointer shadow-xs"
+                    className="px-3.5 sm:px-4 py-2 bg-[#446353] hover:bg-[#365143] text-white text-xs font-semibold uppercase tracking-wider rounded-sm transition-colors cursor-pointer shadow-xs shrink-0"
                   >
                     Book Now
                   </button>

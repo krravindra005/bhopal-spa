@@ -14,8 +14,8 @@ export const ProjectDownloadModal: React.FC<ProjectDownloadModalProps> = ({ isOp
 
   const projectFiles = [
     { name: 'src/config/business.ts', desc: 'Central office location, Google Maps embed & contact configuration' },
-    { name: 'src/data/spaData.ts', desc: 'Pranaya therapies catalog, prices (₹), durations, gallery & reviews' },
-    { name: 'src/components/Header.tsx', desc: 'Top bar navigation with Pranaya eucalyptus sage branding & logo' },
+    { name: 'src/data/spaData.ts', desc: 'Nandini Spa therapies catalog, prices (₹), durations, gallery & reviews' },
+    { name: 'src/components/Header.tsx', desc: 'Top bar navigation with Nandini eucalyptus sage branding & logo' },
     { name: 'src/components/Footer.tsx', desc: 'Warm espresso footer with Bhopal local context, hours & brand details' },
     { name: 'src/components/Logo.tsx', desc: 'Scalable vector branding emblem and typography component' },
     { name: 'src/components/GoogleMapsEmbed.tsx', desc: 'Official Google Maps embed linked to centralized config' },
@@ -23,7 +23,7 @@ export const ProjectDownloadModal: React.FC<ProjectDownloadModalProps> = ({ isOp
     { name: 'src/components/ServiceDetailModal.tsx', desc: 'Treatment breakdown with step-by-step protocols' },
     { name: 'src/components/ConfigEditorDrawer.tsx', desc: 'Live admin address/maps editor & code snippet generator' },
     { name: 'src/pages/HomePage.tsx', desc: 'Warm hero banner, 4-pillar trust strip, services grid & map' },
-    { name: 'src/pages/AboutPage.tsx', desc: 'Pranaya story, mindful restoration, hygiene & therapist standards' },
+    { name: 'src/pages/AboutPage.tsx', desc: 'Nandini story, mindful restoration, hygiene & therapist standards' },
     { name: 'src/pages/ServicesPage.tsx', desc: 'Filtered treatments menu, search bar, prices & FAQs' },
     { name: 'src/pages/GalleryPage.tsx', desc: 'Interactive ambiance gallery with Lightbox zoom' },
     { name: 'src/pages/ContactPage.tsx', desc: 'Contact details, message inquiry form & map' },
@@ -45,38 +45,38 @@ export const ProjectDownloadModal: React.FC<ProjectDownloadModalProps> = ({ isOp
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#201C17]/65 backdrop-blur-xs overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 bg-[#201C17]/70 backdrop-blur-xs overflow-y-auto">
       <div 
-        className="relative w-full max-w-2xl bg-white rounded-xl shadow-2xl border border-[#E3DACD] overflow-hidden my-8"
+        className="relative w-full max-w-2xl bg-white rounded-xl shadow-2xl border border-[#E3DACD] overflow-hidden my-auto sm:my-8 max-h-[92vh] flex flex-col"
         role="dialog"
         aria-modal="true"
       >
         {/* Header — Warm Espresso (#201C17) */}
-        <div className="bg-[#201C17] text-white px-6 py-5 flex items-center justify-between border-b border-[#332D26]">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-full bg-[#2E2822] flex items-center justify-center">
+        <div className="bg-[#201C17] text-white px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between border-b border-[#332D26] shrink-0">
+          <div className="flex items-center gap-2.5 min-w-0 pr-2">
+            <div className="w-8 h-8 rounded-full bg-[#2E2822] flex items-center justify-center shrink-0">
               <Package className="w-4 h-4 text-[#7A9988]" />
             </div>
-            <div>
-              <h3 className="font-serif text-lg font-medium text-[#FAF7F2]">
+            <div className="min-w-0">
+              <h3 className="font-serif text-base sm:text-lg font-medium text-[#FAF7F2] truncate">
                 Download {BUSINESS_CONFIG.brandName} Codebase
               </h3>
-              <p className="text-xs text-[#7A9988]">
-                React 19 + Vite + Tailwind CSS v4 · Warm Ivory & Eucalyptus Sage Palette
+              <p className="text-[11px] sm:text-xs text-[#7A9988] truncate">
+                React 19 + Vite + Tailwind CSS v4 · Warm Ivory & Eucalyptus Sage
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
             aria-label="Close download modal"
-            className="p-1.5 text-[#C5BBAF] hover:text-white rounded-md hover:bg-[#2E2822] transition-colors cursor-pointer"
+            className="p-1.5 text-[#C5BBAF] hover:text-white rounded-md hover:bg-[#2E2822] transition-colors cursor-pointer shrink-0"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Content */}
-        <div className="p-6 sm:p-8 max-h-[75vh] overflow-y-auto space-y-6 bg-[#FAF7F2]">
+        <div className="p-4 sm:p-6 md:p-8 flex-1 overflow-y-auto space-y-5 sm:space-y-6 bg-[#FAF7F2]">
           
           {/* Main Download Callout */}
           <div className="p-5 bg-white rounded-xl border border-[#E3DACD] shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
@@ -114,7 +114,7 @@ export const ProjectDownloadModal: React.FC<ProjectDownloadModalProps> = ({ isOp
             </h5>
             <div className="bg-[#201C17] text-[#FAF7F2] p-4 rounded-lg font-mono text-xs space-y-2 border border-[#3E362E]">
               <div className="text-[#7A9988]"># 1. Unzip the downloaded file:</div>
-              <div>unzip {BUSINESS_CONFIG.zipFileName} -d pranaya-wellness && cd pranaya-wellness</div>
+              <div>unzip {BUSINESS_CONFIG.zipFileName} -d nandini-spa && cd nandini-spa</div>
               <div className="text-[#7A9988] pt-1"># 2. Install dependencies:</div>
               <div>npm install</div>
               <div className="text-[#7A9988] pt-1"># 3. Start local development server:</div>

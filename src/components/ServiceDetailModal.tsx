@@ -16,9 +16,9 @@ export const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
   if (!service) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#201C17]/65 backdrop-blur-xs overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 bg-[#201C17]/70 backdrop-blur-xs overflow-y-auto">
       <div 
-        className="relative w-full max-w-3xl bg-white rounded-xl shadow-2xl border border-[#E3DACD] overflow-hidden my-8"
+        className="relative w-full max-w-3xl bg-white rounded-xl shadow-2xl border border-[#E3DACD] overflow-hidden my-auto sm:my-8 max-h-[92vh] flex flex-col"
         role="dialog"
         aria-modal="true"
       >
@@ -26,13 +26,13 @@ export const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
         <button
           onClick={onClose}
           aria-label="Close details"
-          className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/90 hover:bg-white text-[#28231D] hover:text-[#446353] shadow-sm transition-colors cursor-pointer border border-[#E3DACD]"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 p-2 rounded-full bg-white/90 hover:bg-white text-[#28231D] hover:text-[#446353] shadow-sm transition-colors cursor-pointer border border-[#E3DACD]"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Media Banner with Fallback */}
-        <div className="relative h-64 sm:h-72 w-full bg-[#F3EFE6] overflow-hidden">
+        <div className="relative h-52 sm:h-64 md:h-72 w-full shrink-0 bg-[#F3EFE6] overflow-hidden">
           <img
             src={service.imageUrl}
             alt={service.title}
@@ -43,27 +43,27 @@ export const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
             }}
           />
           {/* Scrim Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#201C17] via-[#201C17]/50 to-transparent flex flex-col justify-end p-6 sm:p-8">
-            <div className="text-[#7A9988] text-xs uppercase tracking-widest font-medium mb-1">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#201C17] via-[#201C17]/60 to-transparent flex flex-col justify-end p-4 sm:p-6 md:p-8">
+            <div className="text-[#7A9988] text-[11px] sm:text-xs uppercase tracking-widest font-medium mb-1">
               {service.category}
             </div>
-            <h3 className="font-serif text-2xl sm:text-3xl text-white font-medium tracking-tight">
+            <h3 className="font-serif text-xl sm:text-2xl md:text-3xl text-white font-medium tracking-tight pr-8">
               {service.title}
             </h3>
-            <div className="mt-2 flex flex-wrap items-center gap-4 text-xs text-[#ECE4D8] font-sans">
+            <div className="mt-2 flex flex-wrap items-center gap-2.5 sm:gap-4 text-xs text-[#ECE4D8] font-sans">
               <span className="flex items-center gap-1.5">
-                <Clock className="w-4 h-4 text-[#7A9988]" />
+                <Clock className="w-3.5 h-3.5 text-[#7A9988]" />
                 <span>{service.duration}</span>
               </span>
               <span aria-hidden="true" className="text-[#8C8275]">·</span>
-              <span className="font-mono text-base font-semibold text-white">
+              <span className="font-mono text-sm sm:text-base font-semibold text-white">
                 ₹{service.price.toLocaleString('en-IN')}
               </span>
               {service.popular && (
                 <>
                   <span aria-hidden="true" className="text-[#8C8275]">·</span>
                   <span className="text-[#F7EDE8] bg-[#B3644C] px-2 py-0.5 rounded text-[11px] font-semibold flex items-center gap-1">
-                    <Sparkles className="w-3.5 h-3.5" /> Signature Ritual
+                    <Sparkles className="w-3 h-3" /> Signature Ritual
                   </span>
                 </>
               )}
@@ -72,7 +72,7 @@ export const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
         </div>
 
         {/* Modal Scrollable Body */}
-        <div className="p-6 sm:p-8 max-h-[60vh] overflow-y-auto space-y-6 text-[#28231D] bg-[#FAF7F2]">
+        <div className="p-4 sm:p-6 md:p-8 flex-1 overflow-y-auto space-y-5 sm:space-y-6 text-[#28231D] bg-[#FAF7F2]">
           
           {/* Full Description */}
           <div>

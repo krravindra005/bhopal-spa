@@ -34,8 +34,8 @@ export interface Testimonial {
 
 export const SPA_SERVICES: SpaService[] = [
   {
-    id: 'pranaya-deep-recovery',
-    title: 'Pranaya Kinetic Muscle Reset & Deep Tissue',
+    id: 'nandini-deep-recovery',
+    title: 'Nandini Kinetic Muscle Reset & Deep Tissue',
     category: 'Bodywork & Muscle Relief',
     shortDesc: 'Precision targeted trigger point therapy addressing dense sub-layer tightness, postural compression, and physical fatigue.',
     fullDesc: 'A rigorous anatomical treatment designed for tired musculature and chronic postural compression. Our master practitioners combine sustained deep-finger friction, myofascial stripping, and organic wild arnica infusions to disperse dense lactic deposits, re-align connective muscle bands, and restore effortless physical movement.',
@@ -55,7 +55,7 @@ export const SPA_SERVICES: SpaService[] = [
       'Passive assisted mobility stretching and cool herbal mist'
     ],
     idealFor: 'Busy executives, athletes, and individuals suffering from persistent neck, shoulder, or lower back stiffness.',
-    imageUrl: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80',
   },
   {
     id: 'oceanic-basalt-stone',
@@ -79,7 +79,7 @@ export const SPA_SERVICES: SpaService[] = [
       'Stationary alignment stone placement over spinal chakras'
     ],
     idealFor: 'Those who carry accumulated daily fatigue and desire deep muscular release without intense manual pressure.',
-    imageUrl: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80',
   },
   {
     id: 'vedic-shirodhara-abhyanga',
@@ -103,7 +103,30 @@ export const SPA_SERVICES: SpaService[] = [
       'Gentle scalp massage and restorative saffron-cardamom infusion'
     ],
     idealFor: 'Anyone enduring persistent mental exhaustion, sleep disruptions, intense screen fatigue, or burnout.',
-    imageUrl: 'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 'ayurvedic-potli-massage',
+    title: 'Vedic Potli Herbal Poultice Compression',
+    category: 'Vedic Healing Rituals',
+    shortDesc: 'Warm steamed linen poultices filled with therapeutic herbs and mineral salts applied with rhythmic compression.',
+    fullDesc: 'An authentic Ayurvedic therapy particularly beneficial for inflammatory stiffness and deep muscular knots. Medicated muslin pouches (Kizhi / Potli) packed with dried medicinal roots, rock salt, and camphor are steeped in hot therapeutic oils and gently tapped along tense muscle junctions to dissipate pain and draw out toxins.',
+    duration: '75 Mins',
+    price: 2999,
+    benefits: [
+      'Significantly alleviates chronic joint stiffness and muscular soreness',
+      'Assists blood micro-circulation and drains stagnant inflammatory fluids',
+      'Promotes cellular sweating and deep physiological detox',
+      'Induces profound systemic physical and nervous system calm'
+    ],
+    steps: [
+      'Preliminary warm medicated oil application over back and limbs',
+      'Rhythmic patting and gliding with heated Ayurvedic herb potlis',
+      'Focused trigger-point kneading on lumbar spine and scapular areas',
+      'Warm herbal towel compress and calming turmeric tisane'
+    ],
+    idealFor: 'Individuals with frozen shoulders, back spasms, arthritis discomfort, or sports fatigue.',
+    imageUrl: 'https://images.unsplash.com/photo-1591343395082-e120087004b4?auto=format&fit=crop&w=1200&q=80',
   },
   {
     id: 'aquatic-aromatherapy-flow',
@@ -126,7 +149,77 @@ export const SPA_SERVICES: SpaService[] = [
       'Soothing cranial acupressure release'
     ],
     idealFor: 'Those seeking gentle, comforting holistic touch to decompress and recharge mental clarity.',
-    imageUrl: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 'balinese-palm-harmony',
+    title: 'Balinese Deep Harmony & Acupressure',
+    category: 'Bodywork & Muscle Relief',
+    shortDesc: 'Ancient Indonesian full-body ritual uniting deliberate palm pressure, skin rolling, and aromatic frangipani oils.',
+    fullDesc: 'Rooted in traditional Indonesian healing, this treatment utilizes therapist palm heels, gentle thumb kneading, and rhythmic skin-rolling strokes. Enhanced by warm organic coconut and frangipani oils, it unlocks congested meridian pathways and produces deep physical serenity from scalp to toes.',
+    duration: '75 Mins',
+    price: 2799,
+    benefits: [
+      'Dissolves dense knots without causing acute muscular trauma',
+      'Enhances oxygen supply and micro-vascular blood flow',
+      'Releases blocked emotional tension and restores physical vitality',
+      'Imparts a deep, tranquil state of meditative mindfulness'
+    ],
+    steps: [
+      'Floral foot bath and lemongrass sea-salt exfoliation',
+      'Full-body palm pressure-point deactivation along spine and legs',
+      'Gentle skin rolling and rhythmic myofascial stretching',
+      'Aromatic warm compress and ginger-lemongrass infusion'
+    ],
+    idealFor: 'Anyone feeling physically drained, seeking medium-firm holistic bodywork with rich cultural heritage.',
+    imageUrl: 'https://images.unsplash.com/photo-1583416750470-965b2707b355?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 'swedish-stress-recovery',
+    title: 'Swedish Stress Recovery & Neck Decompression',
+    category: 'Bodywork & Muscle Relief',
+    shortDesc: 'Classic European rhythmic bodywork dedicated to erasing postural desk strain, trapezius stiffness, and fatigue.',
+    fullDesc: 'A scientifically validated modality combining long gliding strokes (effleurage), muscle kneading (petrissage), and gentle friction along the trapezius, cervical spine, and lumbar band. Designed specifically for individuals whose work entails prolonged sitting or computer usage.',
+    duration: '60 Mins',
+    price: 2499,
+    popular: true,
+    benefits: [
+      'Rapidly releases desk-worker tension across neck and shoulders',
+      'Improves venous blood return to the heart and eases fatigue',
+      'Boosts flexibility and passive range of motion in spinal joints',
+      'Provides immediate emotional relaxation and tension release'
+    ],
+    steps: [
+      'Cervical range-of-motion and spinal curvature check',
+      'Warm lavender and sweet almond oil back application',
+      'Systematic effleurage, petrissage, and shoulder blade release',
+      'Cooling camphor and herbal neck compress'
+    ],
+    idealFor: 'Professionals with desk fatigue, tech-neck soreness, or shoulder stiffness.',
+    imageUrl: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 'thai-assisted-yoga-stretch',
+    title: 'Traditional Thai Assisted Stretch & Mobility',
+    category: 'Bodywork & Muscle Relief',
+    shortDesc: 'Dynamic mat bodywork combining acupressure along Sen energy lines with assisted yoga-based passive stretches.',
+    fullDesc: 'Conducted on a comfortable firm sanctuary floor mat with comfortable loose clothing provided. The therapist uses thumbs, palms, elbows, and gentle body weight to apply rhythmic pressure along the body’s Sen lines, followed by guided passive yogic stretches that lengthen tight hamstrings, hips, and spine.',
+    duration: '75 Mins',
+    price: 2899,
+    benefits: [
+      'Significantly increases spinal range of motion and joint flexibility',
+      'Eliminates chronic lower back compression and hip flexor tightness',
+      'Balances physical energy flows without requiring greasy oils',
+      'Leaves the recipient feeling elongated, centered, and physically light'
+    ],
+    steps: [
+      'Joint mobility check and loose cotton therapy attire fitting',
+      'Rhythmic foot and palm compression ascending through legs',
+      'Assisted cobra, spinal twist, and hamstring lengthening stretches',
+      'Cranial traction, temple acupressure, and herbal jasmine tisane'
+    ],
+    idealFor: 'Athletes, yogis, runners, or anyone desiring deep stretch and joint opening without heavy oil application.',
+    imageUrl: 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=1200&q=80',
   },
   {
     id: 'cellular-collagen-facial',
@@ -136,7 +229,6 @@ export const SPA_SERVICES: SpaService[] = [
     fullDesc: 'Elevate your natural skin vitality through bioactive sea minerals and botanical peptides. This bespoke multi-stage facial incorporates deep gentle pore steam, cold ultrasonic lymphatic drainage, and a nutrient-dense marine collagen hydration veil that smooths micro-creases and imparts a visible, dewy radiance.',
     duration: '60 Mins',
     price: 2899,
-    popular: true,
     benefits: [
       'Dramatically rehydrates dull, sun-parched facial tissue',
       'Refines pore visibility and calms redness or sensitivity',
@@ -150,7 +242,7 @@ export const SPA_SERVICES: SpaService[] = [
       'Application of marine collagen biocellulose mask and UV defense'
     ],
     idealFor: 'Urban dwellers seeking immediate skin brightening, lifted contours, and deep cellular hydration.',
-    imageUrl: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80',
   },
   {
     id: 'thalasso-sea-salt-cocoon',
@@ -173,11 +265,11 @@ export const SPA_SERVICES: SpaService[] = [
       'Detoxifying thermal clay wrap and velvet moisture lock'
     ],
     idealFor: 'Individuals feeling sluggish, congested, or experiencing dry, uneven whole-body skin texture.',
-    imageUrl: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=1200&q=80',
   },
   {
-    id: 'pranaya-couples-haven',
-    title: 'Pranaya Sanctuary Couples Haven',
+    id: 'nandini-couples-haven',
+    title: 'Nandini Sanctuary Couples Haven',
     category: 'Sanctuary Packages',
     shortDesc: 'Synchronized dual massage in our premier VIP suite featuring private hydro-tub, floral foot bath, and artisan refreshments.',
     fullDesc: 'An exclusive, uninterrupted sanctuary designed for couples, friends, or companions. Enjoy dual side-by-side bespoke 75-minute therapeutic massages within our climate-controlled private executive suite. Completed with a welcoming floral foot soak, soothing acoustic ambiance, and artisan herbal tisanes.',
@@ -197,7 +289,7 @@ export const SPA_SERVICES: SpaService[] = [
       'Private suite lounge time with signature infused herbal tea'
     ],
     idealFor: 'Anniversaries, milestone celebrations, or partners seeking a shared sanctuary of renewal.',
-    imageUrl: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80',
   },
   {
     id: 'oriental-reflex-pathway',
@@ -220,89 +312,156 @@ export const SPA_SERVICES: SpaService[] = [
       'Cooling mint cream finish with warm towel wrap'
     ],
     idealFor: 'Travelers, active walkers, or anyone on their feet all day seeking quick restorative relief.',
-    imageUrl: 'https://images.unsplash.com/photo-1519735777090-ec97162dc266?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1519735777090-ec97162dc266?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 'spinal-alignment-kinesiology',
+    title: 'Targeted Spinal Alignment & Trigger Point Bodywork',
+    category: 'Bodywork & Muscle Relief',
+    shortDesc: 'Precision neuromuscular manipulation focused on cervical, thoracic, and lumbar tension release.',
+    fullDesc: 'Crafted for acute postural tightness, this intensive therapy isolates chronic trigger points across the paravertebral muscles, scapula, and gluteal attachments. Incorporating hot botanical compresses and rhythmic thumbs-and-forearms friction to unlock restricted spinal mobility.',
+    duration: '60 Mins',
+    price: 2999,
+    benefits: [
+      'Decompresses cramped spinal vertebrae and relieves sciatic nerve impingement',
+      'Deactivates stubborn myofascial knots and postural spasms',
+      'Restores balanced pelvic and scapular symmetry',
+      'Promotes immediate freedom of movement and physical lightness'
+    ],
+    steps: [
+      'Anatomical spinal palpation and range-of-motion assessment',
+      'Deep thermal compress application along spinal erectors',
+      'Targeted trigger-point ischemic compression and myofascial release',
+      'Gentle passive spinal traction and cooling herbal liniment finish'
+    ],
+    idealFor: 'Individuals enduring stubborn back spasms, computer-neck curvature, or sciatica tightness.',
+    imageUrl: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 'hydro-botanical-soak-ritual',
+    title: 'Aromatic Hydro-Mineral Soak & Botanical Milk Bath',
+    category: 'Hydro & Thermal Therapy',
+    shortDesc: 'A private submerged thermal soak infused with Epsom magnesium flakes, raw coconut milk, and jasmine botanicals.',
+    fullDesc: 'Immerse your body in an opulent private hydrotherapy bath filled with therapeutic Himalayan and Dead Sea salts, pure unrefined coconut milk, and organic jasmine essential oils. The mineralized water relieves muscular buoyancy tension while botanical lipids intensely condition every inch of your skin.',
+    duration: '45 Mins',
+    price: 1999,
+    benefits: [
+      'Eliminates gravitational weight and hydrostatic stress on joints',
+      'Magnesium absorption promotes deep somatic muscular relaxation',
+      'Softens and hydrates dry skin with natural plant emollients',
+      'Lulls the nervous system into effortless serene tranquility'
+    ],
+    steps: [
+      'Private suite hydro-tub preparation with warm mineralized waters',
+      'Infusion of pure organic coconut milk, magnesium, and jasmine oils',
+      'Uninterrupted 30-minute tranquil therapeutic soak with chilled herbal tisane',
+      'Warm rainfall shower rinse and velvet botanical moisturization'
+    ],
+    idealFor: 'Those desiring gentle full-body hydrotherapy to soothe sore joints and nourish dry skin.',
+    imageUrl: 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1200&q=80',
   }
 ];
 
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
-    id: 'ag-1',
-    title: 'Pranaya Tranquility Lounge',
+    id: 'ng-1',
+    title: 'Nandini Spa Tranquility Lounge',
     category: 'Sanctuary Spaces',
-    imageUrl: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80',
     caption: 'Calming soft cream and sand lounge space featuring botanical decor and warm ambient lighting.'
   },
   {
-    id: 'ag-2',
+    id: 'ng-2',
     title: 'Heated Volcanic Basalt Stones',
     category: 'Therapies',
-    imageUrl: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80',
     caption: 'Carefully smoothed basalt stones heated in aromatic botanical mineral baths.'
   },
   {
-    id: 'ag-3',
+    id: 'ng-3',
     title: 'Traditional Vedic Shirodhara Stream',
     category: 'Therapies',
-    imageUrl: 'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1200&q=80',
     caption: 'Continuous medicated oil stream poured with steady rhythm over the third eye for deep mental calm.'
   },
   {
-    id: 'ag-4',
-    title: 'Botanical Peptide Facial Suite',
-    category: 'Botanicals',
-    imageUrl: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=80',
-    caption: 'Private serene facial treatment suite with cooling jade drainage and pure organic plant serums.'
+    id: 'ng-4',
+    title: 'Vedic Potli Herbal Poultice Ritual',
+    category: 'Therapies',
+    imageUrl: 'https://images.unsplash.com/photo-1591343395082-e120087004b4?auto=format&fit=crop&w=1200&q=80',
+    caption: 'Steamed medicated herbal poultices prepared freshly with Himalayan rock salt and restorative herbs.'
   },
   {
-    id: 'ag-5',
+    id: 'ng-5',
+    title: 'Deep Muscular Release & Myofascial Bodywork',
+    category: 'Therapies',
+    imageUrl: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1200&q=80',
+    caption: 'Master kinesiologist applying focused anatomical pressure along spinal and trapezius tension zones.'
+  },
+  {
+    id: 'ng-6',
     title: 'Private Couples Sanctuary Suite',
     category: 'Sanctuary Spaces',
-    imageUrl: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80',
     caption: 'Secluded VIP suite with side-by-side heated tables and private rain shower facilities.'
   },
   {
-    id: 'ag-6',
+    id: 'ng-7',
+    title: 'Botanical Peptide Facial Suite',
+    category: 'Botanicals',
+    imageUrl: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80',
+    caption: 'Private serene facial treatment suite with cooling jade drainage and pure organic plant serums.'
+  },
+  {
+    id: 'ng-8',
     title: 'Cold-Pressed Botanical Essential Oils',
     category: 'Botanicals',
-    imageUrl: 'https://images.unsplash.com/photo-1608248597359-54332c02e1c9?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1200&q=80',
     caption: 'Steam-distilled single-origin essential oils free from parabens, synthetic fragrances, or fillers.'
+  },
+  {
+    id: 'ng-9',
+    title: 'Acupressure Foot Reflexology Pathway',
+    category: 'Therapies',
+    imageUrl: 'https://images.unsplash.com/photo-1519735777090-ec97162dc266?auto=format&fit=crop&w=1200&q=80',
+    caption: 'Focused reflexology and Kansa bronze wand work addressing plantar pressure points and leg vitality.'
   }
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    id: 'at-1',
+    id: 'nt-1',
     author: 'Sunil Rao',
     locality: 'Arera Colony, Bhopal',
     treatment: 'Kinetic Muscle Reset & Deep Tissue',
     rating: 5,
     date: 'October 2026',
-    quote: 'The level of professionalism at Pranaya Wellness Sanctuary is exceptional. As someone dealing with stiff lower back muscles from long desk hours, their master therapist worked through the knots with genuine anatomical precision.',
+    quote: 'The level of professionalism at Nandini Spa is exceptional. As someone dealing with stiff lower back muscles from long desk hours, their master therapist worked through the knots with genuine anatomical precision.',
     outcome: 'Chronic postural back tightness resolved'
   },
   {
-    id: 'at-2',
+    id: 'nt-2',
     author: 'Meera Deshmukh',
     locality: 'Shyamla Hills, Bhopal',
     treatment: 'Authentic Shirodhara & Golden Abhyanga',
     rating: 5,
     date: 'September 2026',
-    quote: 'Stepping into Pranaya feels like entering an entirely different world of peace. The continuous warm oil stream during Shirodhara quieted my anxiety and gave me the best night of deep sleep in years.',
+    quote: 'Stepping into Nandini Spa feels like entering an entirely different world of peace. The continuous warm oil stream during Shirodhara quieted my anxiety and gave me the best night of deep sleep in years.',
     outcome: 'Restored deep sleep and mental calm'
   },
   {
-    id: 'at-3',
+    id: 'nt-3',
     author: 'Dev & Natasha Malhotra',
     locality: 'Kolar Road, Bhopal',
-    treatment: 'Pranaya Sanctuary Couples Haven',
+    treatment: 'Nandini Sanctuary Couples Haven',
     rating: 5,
     date: 'August 2026',
-    quote: 'We spent our wedding anniversary at Pranaya’s VIP couples suite. The attention to detail, private rainfall showers, and warm earthy ambiance were world-class. Highly recommended!',
+    quote: 'We spent our wedding anniversary at Nandini Spa’s VIP couples suite. The attention to detail, private rainfall showers, and warm earthy ambiance were world-class. Highly recommended!',
     outcome: 'A memorable, deeply restorative anniversary'
   }
 ];
 
-export const PRANAYA_PILLARS = [
+export const NANDINI_PILLARS = [
   {
     title: 'Anatomical Precision & Master Touch',
     description: 'Every session is conducted by certified practitioners with comprehensive knowledge of musculoskeletal kinesiology and pressure meridians.',
@@ -325,4 +484,5 @@ export const PRANAYA_PILLARS = [
   }
 ];
 
-export const AURANEST_PILLARS = PRANAYA_PILLARS;
+export const PRANAYA_PILLARS = NANDINI_PILLARS;
+export const AURANEST_PILLARS = NANDINI_PILLARS;

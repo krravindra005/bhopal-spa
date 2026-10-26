@@ -5,7 +5,9 @@ import { execSync } from 'node:child_process';
 const rootDir = process.cwd();
 const stagingDir = path.join(rootDir, 'dist_bundle');
 const publicDir = path.join(rootDir, 'public');
-const destZip = path.join(publicDir, 'pranaya-wellness-project.zip');
+const destZip = path.join(publicDir, 'nandini-spa-project.zip');
+const legacyMassageZip = path.join(publicDir, 'nandini-massage-project.zip');
+const legacyPranayaZip = path.join(publicDir, 'pranaya-wellness-project.zip');
 const legacyAuranestZip = path.join(publicDir, 'auranest-wellness-project.zip');
 const legacySerenovaZip = path.join(publicDir, 'serenova-spa-project.zip');
 
@@ -60,6 +62,8 @@ const psScript = `Compress-Archive -Path '${stagingDir}\\*' -DestinationPath '${
 execSync(`powershell -NoProfile -Command "${psScript}"`, { stdio: 'inherit' });
 
 // Also duplicate to legacy zips so all paths work smoothly
+fs.copyFileSync(destZip, legacyMassageZip);
+fs.copyFileSync(destZip, legacyPranayaZip);
 fs.copyFileSync(destZip, legacyAuranestZip);
 fs.copyFileSync(destZip, legacySerenovaZip);
 
@@ -68,4 +72,4 @@ fs.rmSync(stagingDir, { recursive: true, force: true });
 
 const stats = fs.statSync(destZip);
 console.log(`Successfully created ${destZip} (${(stats.size / 1024).toFixed(1)} KB)`);
-console.log(`Also synchronized backward-compatible archives: ${legacyAuranestZip} & ${legacySerenovaZip}`);
+console.log(`Also synchronized backward-compatible archives: ${legacyMassageZip}, ${legacyPranayaZip}, ${legacyAuranestZip} & ${legacySerenovaZip}`);

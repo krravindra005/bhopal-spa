@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Clock, Star, MapPin, Calendar, HeartHandshake, Droplets, ShieldCheck, Award } from 'lucide-react';
-import { SPA_SERVICES, PRANAYA_PILLARS, TESTIMONIALS, SpaService } from '../data/spaData';
+import { ArrowRight, Clock, Star, MapPin, Calendar, HeartHandshake, Droplets, ShieldCheck, Award, Navigation, ExternalLink } from 'lucide-react';
+import { SPA_SERVICES, NANDINI_PILLARS, TESTIMONIALS, SpaService } from '../data/spaData';
 import { BUSINESS_CONFIG } from '../config/business';
 import { GoogleMapsEmbed } from '../components/GoogleMapsEmbed';
 
@@ -23,11 +23,12 @@ export const HomePage: React.FC<HomePageProps> = ({
     'Bodywork & Muscle Relief',
     'Hydro & Thermal Therapy',
     'Vedic Healing Rituals',
+    'Botanical Facial Care',
     'Sanctuary Packages',
   ];
 
   const filteredServices = activeCategory === 'All'
-    ? SPA_SERVICES.slice(0, 6)
+    ? SPA_SERVICES
     : SPA_SERVICES.filter((s) => s.category === activeCategory);
 
   const getPillarIcon = (name: string) => {
@@ -43,47 +44,48 @@ export const HomePage: React.FC<HomePageProps> = ({
     <div className="flex flex-col w-full bg-[#FAF7F2]">
       
       {/* 1. Cinematic Hero Section — Warm organic spa imagery with gentle espresso-toned scrim */}
-      <section className="relative w-full min-h-[600px] lg:min-h-[660px] flex items-center bg-[#201C17] text-white overflow-hidden">
+      <section className="relative w-full min-h-[540px] sm:min-h-[600px] lg:min-h-[660px] flex items-center bg-[#201C17] text-white overflow-hidden">
         {/* Background Spa Visual with Warm Natural Lighting */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1920&q=85"
-            alt="Pranaya Wellness Sanctuary peaceful massage suite in Bhopal"
+            src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1920&q=85"
+            alt="Nandini Spa peaceful treatment suite in Bhopal"
             referrerPolicy="no-referrer"
-            className="w-full h-full object-cover object-center filter brightness-[0.78] contrast-[1.05]"
+            loading="eager"
+            className="w-full h-full object-cover object-center filter brightness-[0.76] contrast-[1.05]"
           />
           {/* Warm Espresso and Terracotta Scrim */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#201C17]/95 via-[#201C17]/80 to-[#201C17]/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#201C17]/95 via-[#201C17]/85 to-[#201C17]/55" />
         </div>
 
         {/* Content Container */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28 w-full">
           <div className="max-w-2xl">
             
             {/* Unboxed Kicker */}
-            <div className="flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-[#7A9988] mb-4">
+            <div className="flex flex-wrap items-center gap-2 text-xs font-semibold tracking-widest uppercase text-[#7A9988] mb-4">
               <span>{BUSINESS_CONFIG.city}, {BUSINESS_CONFIG.state}</span>
               <span aria-hidden="true" className="text-[#B3644C]">·</span>
               <span>Holistic Wellness Sanctuary</span>
             </div>
 
             {/* Display Headline */}
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#FAF7F2] leading-[1.15] text-balance">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight text-[#FAF7F2] leading-[1.18] sm:leading-[1.15] text-balance">
               {BUSINESS_CONFIG.tagline}
             </h1>
 
             {/* Value Proposition */}
-            <p className="mt-5 text-base sm:text-lg text-[#ECE4D8] leading-relaxed font-light">
+            <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-[#ECE4D8] leading-relaxed font-light">
               Release accumulated fatigue and rediscover deep bodily equilibrium. 
               Experience anatomical musculoskeletal therapy, heated volcanic stones, 
               and authentic Vedic rituals in tranquil, private climate-controlled suites.
             </p>
 
-            {/* CTA Group: Reserve Appointment + Explore Treatments + Download Project ZIP */}
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            {/* CTA Group: Reserve Appointment + Explore Treatments */}
+            <div className="mt-7 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
               <button
                 onClick={() => onOpenBooking()}
-                className="px-7 py-3.5 bg-[#446353] hover:bg-[#365143] text-white text-xs font-semibold uppercase tracking-wider rounded-sm transition-all shadow-md hover:shadow-lg cursor-pointer flex items-center gap-2"
+                className="w-full sm:w-auto justify-center px-7 py-3.5 bg-[#446353] hover:bg-[#365143] text-white text-xs font-semibold uppercase tracking-wider rounded-sm transition-all shadow-md hover:shadow-lg cursor-pointer flex items-center gap-2"
               >
                 <Calendar className="w-4 h-4" />
                 <span>Reserve Appointment</span>
@@ -91,7 +93,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               
               <Link
                 to="/services"
-                className="px-6 py-3.5 border border-[#ECE4D8] hover:border-white text-[#FAF7F2] hover:text-white text-xs font-semibold uppercase tracking-wider rounded-sm transition-colors flex items-center gap-1.5"
+                className="w-full sm:w-auto justify-center px-6 py-3.5 border border-[#ECE4D8] hover:border-white text-[#FAF7F2] hover:text-white text-xs font-semibold uppercase tracking-wider rounded-sm transition-colors flex items-center gap-1.5"
               >
                 <span>View Treatment Menu</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -104,16 +106,16 @@ export const HomePage: React.FC<HomePageProps> = ({
 
       {/* 2. 4-Column Proof & Assurance Strip — Warm Espresso (#28231D) with Eucalyptus (#7A9988) Accents */}
       <section className="bg-[#28231D] border-b border-[#3E362E] py-6 px-4 sm:px-6 lg:px-8 text-[#ECE4D8]">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
-          <div className="border-r border-[#3E362E] last:border-0 pr-4">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 text-center sm:text-left">
+          <div className="border-r border-[#3E362E] pr-3 sm:pr-4">
             <div className="font-serif text-2xl font-bold text-[#FAF7F2]">100%</div>
             <div className="text-xs text-[#7A9988] mt-0.5">Organic Unrefined Botanicals</div>
           </div>
-          <div className="border-r border-[#3E362E] last:border-0 pr-4">
+          <div className="lg:border-r border-[#3E362E] pr-3 sm:pr-4">
             <div className="font-serif text-2xl font-bold text-[#FAF7F2]">Private</div>
             <div className="text-xs text-[#7A9988] mt-0.5">Climate En-Suite Suites</div>
           </div>
-          <div className="border-r border-[#3E362E] last:border-0 pr-4">
+          <div className="border-r border-[#3E362E] pr-3 sm:pr-4">
             <div className="font-serif text-2xl font-bold text-[#FAF7F2]">Master</div>
             <div className="text-xs text-[#7A9988] mt-0.5">Certified Bodywork Practitioners</div>
           </div>
@@ -133,7 +135,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             <div className="relative rounded-xl overflow-hidden shadow-lg aspect-4/3 sm:aspect-5/4 bg-[#F3EFE6] border border-[#E3DACD]">
               <img
                 src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1000&q=80"
-                alt="Therapist preparing restorative bodywork at Pranaya Wellness Sanctuary Bhopal"
+                alt="Therapist preparing restorative bodywork at Nandini Spa Bhopal"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
               />
@@ -144,7 +146,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 "Restoration is not mere stillness, but the active revival of physical harmony and mental clarity."
               </p>
               <p className="text-[11px] uppercase tracking-wider text-[#B3644C] font-semibold mt-2">
-                — The Pranaya Sanctuary Credo
+                — The Nandini Sanctuary Credo
               </p>
             </div>
           </div>
@@ -198,15 +200,15 @@ export const HomePage: React.FC<HomePageProps> = ({
             </div>
             
             {/* Category Filter Controls */}
-            <div className="flex flex-wrap items-center gap-1.5 p-1 bg-white rounded-lg border border-[#E3DACD]">
+            <div className="flex items-center gap-1.5 p-1 bg-white rounded-lg border border-[#E3DACD] overflow-x-auto max-w-full pb-1 sm:pb-1 scrollbar-none">
               {categories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer whitespace-nowrap ${
+                  className={`px-3.5 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer whitespace-nowrap shrink-0 ${
                     activeCategory === cat
                       ? 'bg-[#446353] text-white shadow-xs font-semibold'
-                      : 'text-[#685F53] hover:text-[#28231D]'
+                      : 'text-[#685F53] hover:text-[#28231D] hover:bg-[#F3EFE6]'
                   }`}
                 >
                   {cat}
@@ -216,17 +218,18 @@ export const HomePage: React.FC<HomePageProps> = ({
           </div>
 
           {/* Services Grid — Pure White (#FFFFFF) Cards with Sage & Terracotta accents */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {filteredServices.map((service) => (
               <div
                 key={service.id}
                 className="bg-white rounded-xl border border-[#E3DACD] overflow-hidden shadow-xs hover:shadow-md transition-shadow flex flex-col group"
               >
                 {/* Image */}
-                <div className="relative h-52 bg-[#F9F6F0] overflow-hidden">
+                <div className="relative aspect-16/10 sm:h-52 w-full bg-[#F9F6F0] overflow-hidden">
                   <img
                     src={service.imageUrl}
                     alt={service.title}
+                    loading="lazy"
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => {
@@ -244,7 +247,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 </div>
 
                 {/* Content */}
-                <div className="p-6 flex-1 flex flex-col justify-between">
+                <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between gap-2 text-xs text-[#685F53] mb-2">
                       <span className="flex items-center gap-1">
@@ -256,26 +259,26 @@ export const HomePage: React.FC<HomePageProps> = ({
                       </span>
                     </div>
 
-                    <h3 className="font-serif text-xl font-medium text-[#28231D] tracking-tight leading-snug">
+                    <h3 className="font-serif text-lg sm:text-xl font-medium text-[#28231D] tracking-tight leading-snug line-clamp-2 min-h-[3rem] sm:min-h-[3.25rem] flex items-center">
                       {service.title}
                     </h3>
 
-                    <p className="mt-2.5 text-xs sm:text-sm text-[#685F53] line-clamp-3 leading-relaxed">
+                    <p className="mt-2 text-xs sm:text-sm text-[#685F53] line-clamp-3 leading-relaxed">
                       {service.shortDesc}
                     </p>
                   </div>
 
                   {/* Card Actions */}
-                  <div className="mt-6 pt-4 border-t border-[#F3EFE6] flex items-center justify-between gap-3">
+                  <div className="mt-5 pt-4 border-t border-[#F3EFE6] flex items-center justify-between gap-2 sm:gap-3">
                     <button
                       onClick={() => onSelectService(service)}
-                      className="text-xs font-semibold uppercase tracking-wider text-[#685F53] hover:text-[#446353] underline underline-offset-4 cursor-pointer"
+                      className="text-xs font-semibold uppercase tracking-wider text-[#685F53] hover:text-[#446353] underline underline-offset-4 cursor-pointer py-1"
                     >
                       View Protocol
                     </button>
                     <button
                       onClick={() => onOpenBooking(service.id)}
-                      className="px-4 py-2 bg-[#446353] hover:bg-[#365143] text-white text-xs font-semibold uppercase tracking-wider rounded-sm transition-colors cursor-pointer shadow-xs"
+                      className="px-3.5 sm:px-4 py-2 bg-[#446353] hover:bg-[#365143] text-white text-xs font-semibold uppercase tracking-wider rounded-sm transition-colors cursor-pointer shadow-xs shrink-0"
                     >
                       Book Now
                     </button>
@@ -298,11 +301,11 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
       </section>
 
-      {/* 5. Pranaya Wellness Pillars */}
+      {/* 5. Nandini Wellness Pillars */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="max-w-2xl mx-auto text-center mb-16">
           <div className="text-xs font-semibold uppercase tracking-widest text-[#446353] mb-2">
-            The Pranaya Standards
+            The Nandini Standards
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl text-[#28231D] font-normal tracking-tight">
             Our Four Guiding Pillars of Care
@@ -313,7 +316,7 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {PRANAYA_PILLARS.map((pillar, idx) => (
+          {NANDINI_PILLARS.map((pillar, idx) => (
             <div 
               key={idx}
               className="bg-white p-6 rounded-xl border border-[#E3DACD] shadow-xs flex flex-col"
@@ -343,7 +346,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               Testimonials from Bhopal Guests
             </h2>
             <p className="mt-3 text-sm text-[#685F53]">
-              Real feedback from guests who trust Pranaya for physical recovery and inner peace.
+              Real feedback from guests who trust Nandini Spa for physical recovery and inner peace.
             </p>
           </div>
 
@@ -396,8 +399,9 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <MapPin className="w-4 h-4 text-[#446353] shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-[#28231D]">Address: </span>
-                  <span>{BUSINESS_CONFIG.city}, {BUSINESS_CONFIG.state}, {BUSINESS_CONFIG.country}</span>
-                  <div className="text-[#685F53] mt-0.5">{BUSINESS_CONFIG.streetAddressPlaceholder}</div>
+                  <div className="text-[#685F53] mt-1 leading-relaxed">
+                    {BUSINESS_CONFIG.streetAddressPlaceholder}
+                  </div>
                 </div>
               </div>
               <div className="flex items-start gap-2.5">
@@ -414,9 +418,11 @@ export const HomePage: React.FC<HomePageProps> = ({
                 href={BUSINESS_CONFIG.maps.directionsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-[#446353] hover:bg-[#365143] text-white text-xs font-semibold uppercase tracking-wider rounded-sm transition-colors shadow-xs"
+                className="px-6 py-3 bg-[#446353] hover:bg-[#365143] text-white text-xs font-semibold uppercase tracking-wider rounded-sm transition-colors shadow-xs inline-flex items-center gap-2"
               >
-                Get Google Maps Directions
+                <Navigation className="w-4 h-4" />
+                <span>Get Google Maps Directions</span>
+                <ExternalLink className="w-3.5 h-3.5 ml-0.5 opacity-80" />
               </a>
               <Link
                 to="/contact"

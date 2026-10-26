@@ -76,14 +76,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking, onOpenConfig }) =
 
       {/* 2. Main Navigation Bar: Brand Identity, Nav Links & Action Button */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-6 h-20">
+        <div className="flex items-center justify-between gap-4 sm:gap-6 h-16 sm:h-20">
           
-          {/* Brand Identity: Pranaya Wellness Sanctuary */}
+          {/* Brand Identity: Nandini Spa */}
           <Link 
             to="/" 
-            className="flex items-center group whitespace-nowrap shrink-0"
+            className="flex items-center group whitespace-nowrap shrink-0 min-w-0"
           >
-            <Logo variant="dark" size="md" />
+            <Logo variant="dark" size="md" useFullBadge={true} />
           </Link>
 
           {/* Clean Navigation Links with Sage Accents */}

@@ -1,6 +1,6 @@
 {
-  "name": "Pranaya Wellness Sanctuary",
-  "description": "An exquisite wellness and restorative spa sanctuary in Bhopal, Madhya Pradesh. Experience therapeutic muscle release, hydro-thermal care, authentic Ayurvedic rituals, and holistic botanical skin therapies.",
+  "name": "Nandini Spa",
+  "description": "An exquisite restorative wellness and spa sanctuary in Bhopal, Madhya Pradesh. Experience therapeutic deep-tissue bodywork, warm basalt stone care, authentic Ayurvedic rituals, and holistic botanical skin therapies.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

@@ -25,16 +25,16 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenConfig }) =
               Surrender tension to anatomical muscle manipulation, warm basalt stones, and pure botanical essences.
             </p>
           </div>
-          <div className="flex items-center gap-4 shrink-0 flex-wrap justify-center">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 shrink-0 w-full md:w-auto">
             <button
               onClick={onOpenBooking}
-              className="px-6 py-3 bg-[#446353] hover:bg-[#365143] text-white text-xs font-semibold uppercase tracking-wider rounded-sm transition-colors cursor-pointer shadow-sm"
+              className="w-full sm:w-auto text-center px-6 py-3 bg-[#446353] hover:bg-[#365143] text-white text-xs font-semibold uppercase tracking-wider rounded-sm transition-colors cursor-pointer shadow-sm"
             >
               Request Appointment
             </button>
             <Link
               to="/services"
-              className="px-6 py-3 border border-[#7A9988] hover:border-white text-[#FAF7F2] hover:text-white text-xs font-semibold uppercase tracking-wider rounded-sm transition-colors"
+              className="w-full sm:w-auto text-center px-6 py-3 border border-[#7A9988] hover:border-white text-[#FAF7F2] hover:text-white text-xs font-semibold uppercase tracking-wider rounded-sm transition-colors"
             >
               Explore Treatments
             </Link>
@@ -43,13 +43,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenConfig }) =
       </div>
 
       {/* Main Footer Directory */}
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+      <div className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
           
           {/* Col 1: Brand & Identity */}
           <div className="flex flex-col gap-4">
             <Link to="/" className="group inline-block">
-              <Logo variant="light" size="md" />
+              <Logo variant="light" size="md" useFullBadge={false} />
             </Link>
             <p className="text-xs text-[#C5BBAF] leading-relaxed">
               Bhopal’s premier restorative spa sanctuary. We combine kinetic bodywork, 
@@ -131,7 +131,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenConfig }) =
                 <MapPin className="w-4 h-4 text-[#7A9988] shrink-0 mt-0.5" />
                 <div>
                   <div className="font-semibold text-[#FAF7F2]">
-                    {BUSINESS_CONFIG.city}, {BUSINESS_CONFIG.state}, {BUSINESS_CONFIG.country}
+                    {BUSINESS_CONFIG.locality ? `${BUSINESS_CONFIG.locality}, ${BUSINESS_CONFIG.city}` : `Mansarovar Complex, Shivaji Nagar, ${BUSINESS_CONFIG.city}`}
                   </div>
                   <div className="text-[11px] text-[#C5BBAF]/80 mt-0.5">
                     {BUSINESS_CONFIG.streetAddressPlaceholder}

@@ -80,7 +80,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
     // Simulate concierge appointment intake
     setTimeout(() => {
       setIsSubmitting(false);
-      const refCode = `PRANAYA-${Math.floor(100000 + Math.random() * 900000)}`;
+      const refCode = `NANDINI-${Math.floor(100000 + Math.random() * 900000)}`;
       setSubmittedData({
         referenceId: refCode,
         name,
@@ -105,21 +105,21 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#201C17]/65 backdrop-blur-xs overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 bg-[#201C17]/70 backdrop-blur-xs overflow-y-auto">
       <div 
-        className="relative w-full max-w-2xl bg-white rounded-xl shadow-2xl border border-[#E3DACD] overflow-hidden my-8"
+        className="relative w-full max-w-2xl bg-white rounded-xl shadow-2xl border border-[#E3DACD] overflow-hidden my-auto sm:my-8 max-h-[92vh] flex flex-col"
         role="dialog"
         aria-modal="true"
       >
         {/* Header — Warm Espresso (#201C17) */}
-        <div className="bg-[#201C17] text-white px-6 py-5 flex items-center justify-between border-b border-[#332D26]">
-          <div className="flex items-center gap-3">
-            <Logo variant="light" size="sm" showTagline={false} />
-            <div>
-              <h3 className="font-serif text-xl font-medium tracking-tight text-[#FAF7F2]">
+        <div className="bg-[#201C17] text-white px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between border-b border-[#332D26] shrink-0">
+          <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 pr-2">
+            <Logo variant="light" size="sm" showTagline={false} useFullBadge={false} />
+            <div className="min-w-0">
+              <h3 className="font-serif text-lg sm:text-xl font-medium tracking-tight text-[#FAF7F2] truncate">
                 Reserve Your Sanctuary Experience
               </h3>
-              <p className="text-xs text-[#7A9988]">
+              <p className="text-[11px] sm:text-xs text-[#7A9988] truncate">
                 {BUSINESS_CONFIG.city}, {BUSINESS_CONFIG.state} · {BUSINESS_CONFIG.brandShort} Concierge Intake
               </p>
             </div>
@@ -127,14 +127,14 @@ export const BookingModal: React.FC<BookingModalProps> = ({
           <button
             onClick={handleResetAndClose}
             aria-label="Close booking modal"
-            className="p-1.5 text-[#C5BBAF] hover:text-white rounded-md hover:bg-[#2E2822] transition-colors cursor-pointer"
+            className="p-1.5 text-[#C5BBAF] hover:text-white rounded-md hover:bg-[#2E2822] transition-colors cursor-pointer shrink-0"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Content Body */}
-        <div className="p-6 sm:p-8 max-h-[80vh] overflow-y-auto bg-[#FAF7F2]">
+        <div className="p-4 sm:p-6 md:p-8 flex-1 overflow-y-auto bg-[#FAF7F2]">
           {submittedData ? (
             /* Success Confirmation State */
             <div className="py-6 flex flex-col items-center text-center">

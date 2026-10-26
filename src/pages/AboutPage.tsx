@@ -32,7 +32,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenBooking }) => {
           
           <div className="lg:col-span-6 space-y-6 text-[#28231D]">
             <div className="text-xs font-semibold uppercase tracking-widest text-[#446353]">
-              The Pranaya Origin
+              The Nandini Origin
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl text-[#28231D] font-normal tracking-tight leading-tight">
               An Architectural Sanctuary of Pure Restoration
@@ -52,8 +52,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenBooking }) => {
           <div className="lg:col-span-6">
             <div className="rounded-xl overflow-hidden shadow-xl aspect-4/3 bg-[#F3EFE6] border border-[#E3DACD]">
               <img
-                src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1200&q=80"
-                alt="Therapeutic wellness ritual at Pranaya Wellness Sanctuary Bhopal"
+                src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=1200&q=80"
+                alt="Therapeutic wellness sanctuary suites at Nandini Spa Bhopal"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
               />
@@ -140,7 +140,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenBooking }) => {
           <div className="order-2 lg:order-1 rounded-xl overflow-hidden shadow-lg aspect-4/3 bg-[#F3EFE6] border border-[#E3DACD]">
             <img
               src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1200&q=80"
-              alt="Thermal volcanic stone treatment at Pranaya Wellness"
+              alt="Thermal volcanic stone treatment at Nandini Spa"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover"
             />

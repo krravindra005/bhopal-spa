@@ -74,11 +74,11 @@ export const ConfigEditorDrawer: React.FC<ConfigEditorDrawerProps> = ({
   isWhatsappConfigured: ${isWhatsappConfigured},
   zipFileName: "${BUSINESS_CONFIG.zipFileName}",
   maps: {
-    latitude: 23.259933,
-    longitude: 77.412615,
-    zoomLevel: 14,
+    latitude: 23.2242,
+    longitude: 77.4363,
+    zoomLevel: 16,
     embedUrl: "${embedUrl}",
-    directionsUrl: "https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${streetAddress}, ${city}`)}",
+    directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${streetAddress}, ${city}, Madhya Pradesh 462016, India`)}",
   },
   ...
 };`;
@@ -92,7 +92,7 @@ export const ConfigEditorDrawer: React.FC<ConfigEditorDrawerProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex justify-end bg-[#201C17]/50 backdrop-blur-xs">
       <div 
-        className="w-full max-w-lg bg-white h-full shadow-2xl flex flex-col border-l border-[#E3DACD] overflow-hidden"
+        className="w-full max-w-full sm:max-w-lg bg-white h-full shadow-2xl flex flex-col border-l border-[#E3DACD] overflow-hidden"
         role="dialog"
       >
         {/* Header — Warm Espresso (#201C17) */}
@@ -167,7 +167,7 @@ export const ConfigEditorDrawer: React.FC<ConfigEditorDrawerProps> = ({
                   handleAddressChangeAndRegenerateMap(e.target.value, city);
                 }}
                 className="w-full px-3 py-2 rounded border border-[#E3DACD] bg-white text-xs text-[#28231D] focus:ring-1 focus:ring-[#446353]"
-                placeholder="e.g. Arera Colony, Bhopal"
+                placeholder="e.g. C-Block 1st floor, Mansarovar Complex, MF-30, Habibganj Rd, Shivaji Nagar, Bhopal"
               />
               <div className="mt-1 flex items-center gap-2">
                 <input
@@ -260,6 +260,22 @@ export const ConfigEditorDrawer: React.FC<ConfigEditorDrawerProps> = ({
                   Enable WhatsApp quick concierge buttons across website
                 </label>
               </div>
+            </div>
+
+            {/* Google Maps Platform API Key Security Guide */}
+            <div className="p-3.5 rounded-lg bg-[#FAF7F2] border border-[#E3DACD] space-y-1.5 text-xs">
+              <div className="font-semibold text-[#28231D] flex items-center gap-1.5">
+                <MapPin className="w-3.5 h-3.5 text-[#446353]" />
+                <span>Google Maps API Key (Optional)</span>
+              </div>
+              <p className="text-[11px] text-[#685F53] leading-relaxed">
+                The embedded interactive map is already configured to pin <strong>Mansarovar Complex, Shivaji Nagar, Bhopal</strong>. To connect a dedicated Google Cloud Embed API key:
+              </p>
+              <ol className="list-decimal list-inside text-[11px] text-[#685F53] space-y-1 pl-1">
+                <li>Create or copy your key from <a href="https://console.cloud.google.com/google/maps-apis/credentials" target="_blank" rel="noopener noreferrer" className="text-[#446353] underline">Google Cloud Console</a>.</li>
+                <li>Add <code className="bg-white px-1 py-0.5 rounded border border-[#E3DACD] text-[#28231D]">VITE_GOOGLE_MAPS_API_KEY="AIzaSy..."</code> into your local <code className="text-[#28231D]">.env</code> file.</li>
+                <li>Apply <strong>HTTP Referrer restrictions</strong> to protect your key from unauthorized domains. Never commit API keys to source control.</li>
+              </ol>
             </div>
           </div>
 

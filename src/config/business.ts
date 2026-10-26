@@ -1,6 +1,6 @@
 /**
- * Pranaya Wellness Sanctuary — Centralized Business Configuration
- * ===============================================================
+ * Nandini Spa — Centralized Business Configuration
+ * =====================================================
  * 
  * Update this file to modify office location, Google Maps integration,
  * contact email, phone status, or sanctuary operating hours.
@@ -16,8 +16,21 @@ export interface BusinessConfig {
   city: string;
   state: string;
   country: string;
+  locality?: string;
+  zipCode?: string;
   zipFileName: string;
   
+  /**
+   * Official Brand Logo & Emblem configuration
+   */
+  logo: {
+    horizontalUrl?: string;
+    fullUrl: string;
+    emblemUrl: string;
+    originalUrl: string;
+    useFullBadgeInHeader: boolean;
+  };
+
   /**
    * Street address or office suite placeholder.
    */
@@ -74,17 +87,28 @@ export interface BusinessConfig {
 }
 
 export const BUSINESS_CONFIG: BusinessConfig = {
-  brandName: "Pranaya Wellness Sanctuary",
-  brandShort: "Pranaya Wellness",
-  tagline: "Sanctuary of Restorative Living & Holistic Wellness",
-  shortDescription: "An exquisite wellness and restorative spa sanctuary in Bhopal, Madhya Pradesh. Uniting therapeutic deep-tissue bodywork, calming hydro-thermal rituals, botanical skin therapies, and authentic Vedic healing in quiet, climate-controlled suites.",
-  zipFileName: "pranaya-wellness-project.zip",
+  brandName: "Nandini Spa",
+  brandShort: "Nandini Spa",
+  tagline: "Sanctuary of Restorative Spa & Holistic Bodywork",
+  shortDescription: "An exquisite restorative wellness and spa sanctuary in Bhopal, Madhya Pradesh. Uniting therapeutic deep-tissue bodywork, warm basalt stone care, authentic Ayurvedic rituals, and calming botanical aromatherapy in quiet, climate-controlled suites.",
+  zipFileName: "nandini-spa-project.zip",
   
+  // Official Brand Logo (From user horizontal lockup: media_1793003978134)
+  logo: {
+    horizontalUrl: "/nandini-logo-horizontal.png",
+    fullUrl: "/nandini-logo-horizontal.png",
+    emblemUrl: "/nandini-emblem.png",
+    originalUrl: "/nandini-logo-horizontal-original.png",
+    useFullBadgeInHeader: true,
+  },
+
   // Official Location
   city: "Bhopal",
   state: "Madhya Pradesh",
   country: "India",
-  streetAddressPlaceholder: "Arera Colony & Shamla Hills Enclave, Bhopal, Madhya Pradesh",
+  locality: "Mansarovar Complex, Shivaji Nagar",
+  zipCode: "462016",
+  streetAddressPlaceholder: "C-Block 1st floor, Mansarovar Complex, MF-30, Habibganj Rd, No 6 Locality, Shivaji Nagar, Bhopal, Madhya Pradesh 462016",
   isExactStreetAddressConfigured: true,
 
   // Contact Information
@@ -100,13 +124,13 @@ export const BUSINESS_CONFIG: BusinessConfig = {
   isWhatsappConfigured: true,
 
 
-  // Google Maps Integration
+  // Google Maps Integration — Exact geocoordinates for Mansarovar Complex, Shivaji Nagar, Bhopal
   maps: {
-    latitude: 23.259933,
-    longitude: 77.412615,
-    zoomLevel: 14,
-    embedUrl: "https://maps.google.com/maps?q=Bhopal%2C%20Madhya%20Pradesh%2C%20India&t=&z=14&ie=UTF8&iwloc=&output=embed",
-    directionsUrl: "https://www.google.com/maps/search/?api=1&query=Bhopal%2C+Madhya+Pradesh%2C+India",
+    latitude: 23.2242,
+    longitude: 77.4363,
+    zoomLevel: 16,
+    embedUrl: "https://maps.google.com/maps?q=C-Block+1st+floor,+Mansarovar+Complex,+MF-30,+Habibganj+Rd,+No+6+Locality,+Shivaji+Nagar,+Bhopal,+Madhya+Pradesh+462016&t=&z=16&ie=UTF8&iwloc=B&output=embed",
+    directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=C-Block+1st+floor,+Mansarovar+Complex,+MF-30,+Habibganj+Rd,+No+6+Locality,+Shivaji+Nagar,+Bhopal,+Madhya+Pradesh+462016,+India",
     apiKey: typeof import.meta !== "undefined" ? import.meta.env?.VITE_GOOGLE_MAPS_API_KEY : undefined,
   },
 
@@ -125,17 +149,25 @@ export const BUSINESS_CONFIG: BusinessConfig = {
 };
 
 /**
- * Helper utility to build dynamic map embed URL from any address query
+ * Helper utility to build dynamic map embed URL with marker pin from any address query
  */
-export function getGoogleMapsEmbedUrl(query: string, zoom = 14): string {
+export function getGoogleMapsEmbedUrl(query: string, zoom = 16): string {
+  const apiKey = typeof import.meta !== "undefined" ? import.meta.env?.VITE_GOOGLE_MAPS_API_KEY : undefined;
   const encoded = encodeURIComponent(query);
-  return `https://maps.google.com/maps?q=${encoded}&t=&z=${zoom}&ie=UTF8&iwloc=&output=embed`;
+  
+  // If an official Google Maps Platform API key is available, use Maps Embed API Place mode with tracking
+  if (apiKey && apiKey.trim()) {
+    return `https://www.google.com/maps/embed/v1/place?key=${apiKey.trim()}&q=${encoded}&center=23.2242,77.4363&zoom=${zoom}&solution_id=gmp_git_agentskills_v1`;
+  }
+  
+  // Standard zero-config embed with exact location pin marker
+  return `https://maps.google.com/maps?q=${encoded}&t=&z=${zoom}&ie=UTF8&iwloc=B&output=embed`;
 }
 
 /**
- * Helper utility to build navigation directions URL
+ * Helper utility to build navigation directions URL pointing to destination
  */
-export function getGoogleMapsDirectionsUrl(query: string): string {
-  const encoded = encodeURIComponent(query);
-  return `https://www.google.com/maps/search/?api=1&query=${encoded}`;
+export function getGoogleMapsDirectionsUrl(destinationQuery: string): string {
+  const encoded = encodeURIComponent(destinationQuery);
+  return `https://www.google.com/maps/dir/?api=1&destination=${encoded}`;
 }
